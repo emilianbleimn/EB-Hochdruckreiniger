@@ -1459,7 +1459,7 @@ input[type="range"]::-moz-range-thumb {
 @keyframes preFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 @media (prefers-reduced-motion: reduce) { .preloader__logo, .preloader__bar span { animation: none; } }
 
-/* Google-Bewertungen (Elfsight) */
+/* Bewertungs-Abschnitt */
 .reviews { min-height: 200px; }
 .reviews-cta { text-align: center; margin-top: 1.6rem; }
 
