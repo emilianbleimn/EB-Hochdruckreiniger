@@ -15,3 +15,14 @@ Live über GitHub Pages: https://emilianbleimn.github.io/EB-Hochdruckreiniger/
 3. **Preis, Mindestflächen, Entfernung:** Konstanten `PRICE`, `CALC_MIN`, `NEAR_KM`/`MIN_NEAR`, `MAX_KM`/`MIN_FAR` und `HOME` (Erbach, Odenwald) im Skript am Ende der Datei sowie die Texte im Hero. Die Entfernung wird per PLZ über api.zippopotam.us als Luftlinie berechnet.
 4. **Bewertungen:** Array `REVIEWS` im Skript – echte Stimmen eintragen, `beispiel: true` entfernen.
 5. **Vorher/Nachher:** die `div.ba__img` durch `<img class="ba__img" …>` mit echten Fotos ersetzen.
+
+## Logo
+
+Alle Dateien liegen in `assets/`. Die Schrift ist in Pfade umgewandelt, das Logo sieht also überall gleich aus.
+
+| Datei | Verwendung |
+| --- | --- |
+| `logo.svg`, `logo.png` | Logo für helle Hintergründe (Briefpapier, Rechnungen, Visitenkarten) |
+| `logo-weiss.svg`, `logo-weiss.png` | Logo für blaue/dunkle Hintergründe (Kopfzeile der Seite, Fahrzeug) |
+| `logo-icon.svg`, `logo-icon-512.png`, `logo-icon-1024.png` | Nur die Bildmarke (Profilbild für Google, WhatsApp, Instagram) |
+| `favicon.svg` | Vereinfachtes Symbol für den Browser-Tab |
