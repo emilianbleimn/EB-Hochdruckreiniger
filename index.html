@@ -194,9 +194,6 @@
     .flake svg { width: 100%; height: 100%; }
     .service { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
     .service .area span { flex-direction: row; justify-content: center; padding: 14px 10px; }
-    .winter-only { display: none; }
-    .form.is-winter .winter-only { display: flex; }
-    .form.is-winter .clean-only { display: none; }
 
     /* ---------- Referenzen & Bewertungen ---------- */
     .refs { padding: 80px 0 0; }
@@ -302,7 +299,7 @@
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 € pro m²</span>
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 5 m² im Umkreis von 100 km</span>
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 45 m² bis 150 km</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg>Winterdienst</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg>Schneedienst</span>
           </div>
           <a class="btn" href="#anfrage">Jetzt Preis berechnen
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
@@ -358,7 +355,7 @@
           <span class="flake" style="width:90px;height:90px;left:45%;bottom:-20px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg></span>
           <div>
             <h2>Auch im Winter für dich da: Schnee schieben</h2>
-            <p>Wir räumen Schnee, damit bei dir niemand ausrutscht – einmalig nach dem Schneefall oder den ganzen Winter über.</p>
+            <p>Wir räumen Schnee, damit bei dir niemand ausrutscht – zum selben Preis wie die Flächenreinigung.</p>
             <ul class="winter__list">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Einfahrt &amp; Hof</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gehwege</li>
@@ -367,9 +364,9 @@
             </ul>
           </div>
           <div class="winter__side">
-            <div class="winter__price">Preis auf Anfrage</div>
+            <div class="winter__price">3 € pro m²</div>
             <small>ab 5 m² im Umkreis von 100 km</small>
-            <a class="btn" href="#anfrage" data-service="Winterdienst">Winterdienst anfragen</a>
+            <a class="btn" href="#anfrage" data-service="Schneedienst">Schneedienst anfragen</a>
           </div>
         </div>
       </div>
@@ -442,18 +439,11 @@
             <fieldset class="field" style="border:0">
               <legend class="legend">Was brauchst du?</legend>
               <div class="service">
-                <label class="area"><input type="radio" name="Leistung" value="Hochdruckreinigung" checked /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z"/></svg>Hochdruckreinigung</span></label>
-                <label class="area"><input type="radio" name="Leistung" value="Winterdienst" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg>Winterdienst</span></label>
+                <label class="area"><input type="radio" name="Leistung" value="Flächenreinigung" checked /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z"/></svg>Flächenreinigung</span></label>
+                <label class="area"><input type="radio" name="Leistung" value="Schneedienst" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg>Schneedienst</span></label>
               </div>
             </fieldset>
 
-            <fieldset class="field winter-only" style="border:0">
-              <legend class="legend">Wie oft?</legend>
-              <div class="service">
-                <label class="area"><input type="radio" name="Häufigkeit" value="Einmalig" checked disabled /><span>Einmalig</span></label>
-                <label class="area"><input type="radio" name="Häufigkeit" value="Ganzer Winter" disabled /><span>Ganzer Winter</span></label>
-              </div>
-            </fieldset>
 
             <fieldset class="field" style="border:0" data-field="flaeche">
               <legend class="legend">Welche Fläche?</legend>
@@ -500,7 +490,7 @@
             </div>
 
             <div class="estimate" aria-live="polite">
-              <span class="estimate__label"><span class="clean-only">Dein Preis (3 € × <b id="estQm">60</b> m²)</span><span class="winter-only">Winterdienst</span></span>
+              <span class="estimate__label">Dein Preis (3 € × <b id="estQm">60</b> m²)</span>
               <span class="estimate__value" id="estPrice">180 €</span>
             </div>
             <input type="hidden" name="Preis (Schätzung)" id="priceField" value="180 €" />
@@ -691,7 +681,7 @@
         var n = parseInt(qm.value, 10);
         var ok = !isNaN(n) && n >= CALC_MIN;
         estQm.textContent = isNaN(n) ? "–" : n;
-        estPrice.textContent = isWinter() ? "Preis auf Anfrage" : ok ? fmt.format(n * PRICE) : "–";
+        estPrice.textContent = ok ? fmt.format(n * PRICE) : "–";
         priceField.value = estPrice.textContent;
         var min = minFor(distance);
         setErr("qm", ok && n < min ? "Für deinen Ort ist die Mindestfläche " + min + " m² (" + fmt.format(min * PRICE) + ")." : "");
@@ -739,11 +729,9 @@
       ["dragleave", "drop"].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove("is-over"); }); });
       drop.addEventListener("drop", function (ev) { ev.preventDefault(); addFiles(ev.dataTransfer.files); });
 
-      // Leistung: Hochdruckreinigung oder Winterdienst
-      function isWinter() { return !!document.querySelector('input[name="Leistung"][value="Winterdienst"]:checked'); }
+      // Leistung: Flächenreinigung oder Schneedienst
+      function isWinter() { return !!document.querySelector('input[name="Leistung"][value="Schneedienst"]:checked'); }
       function syncService() {
-        document.getElementById("form").classList.toggle("is-winter", isWinter());
-        document.querySelectorAll('input[name="Häufigkeit"]').forEach(function (r) { r.disabled = !isWinter(); });
         update(qm);
       }
       document.querySelectorAll('input[name="Leistung"]').forEach(function (r) { r.addEventListener("change", syncService); });
@@ -783,7 +771,7 @@
           ev.preventDefault();
           var area = form.querySelector('input[name="Fläche"]:checked').value;
           var body = [
-            "Leistung: " + form.querySelector('input[name="Leistung"]:checked').value + (isWinter() ? " (" + form.querySelector('input[name="Häufigkeit"]:checked').value + ")" : ""),
+            "Leistung: " + form.querySelector('input[name="Leistung"]:checked').value,
             "Fläche: " + area,
             "Quadratmeter: " + n + " m²",
             "Preis (Schätzung): " + priceField.value,
