@@ -26,3 +26,4 @@ Alle Dateien liegen in `assets/`. Die Schrift ist in Pfade umgewandelt, das Logo
 | `logo-weiss.svg`, `logo-weiss.png` | Logo für blaue/dunkle Hintergründe (Kopfzeile der Seite, Fahrzeug) |
 | `logo-icon.svg`, `logo-icon-512.png`, `logo-icon-1024.png` | Nur die Bildmarke (Profilbild für Google, WhatsApp, Instagram) |
 | `favicon.svg` | Vereinfachtes Symbol für den Browser-Tab |
+| `logo.pdf` | Alle drei Varianten als Vektor-PDF für Druckerei und Folierung |
