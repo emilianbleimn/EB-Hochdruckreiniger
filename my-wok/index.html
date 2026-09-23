@@ -119,10 +119,10 @@
   @keyframes steam { 0% { opacity: 0; transform: translateY(10px); } 40% { opacity: .9; } 100% { opacity: 0; transform: translateY(-26px); } }
   @keyframes flick { to { transform: scaleY(1.15) scaleX(.92); } }
   .sticker {
-    position: absolute; right: 2%; top: 4%;
+    position: absolute; left: 0; bottom: 6%;
     width: 118px; height: 118px; border-radius: 50%;
     background: var(--red); color: #fff; border: var(--line); box-shadow: var(--shadow-sm);
-    display: grid; place-content: center; text-align: center; transform: rotate(10deg);
+    display: grid; place-content: center; text-align: center; transform: rotate(-10deg);
     font-weight: 800; font-size: 13px; line-height: 1.15;
   }
   .sticker strong { font-family: "Fraunces", serif; font-size: 30px; display: block; }
@@ -332,45 +332,82 @@
       </div>
 
       <div class="art">
-        <svg viewBox="0 0 440 400" role="img" aria-label="Illustration: ein Wok über Flammen, aus dem Nudeln und Gemüse springen">
+        <svg viewBox="0 0 440 400" role="img" aria-label="Illustration: ein Wok über Flammen, aus dem Nudeln, Pilze, Paprika, Brokkoli und Bohnen springen">
           <circle cx="220" cy="200" r="172" fill="#f2b134" stroke="#221c18" stroke-width="4"/>
+          <circle cx="220" cy="200" r="154" fill="#fff4dc" stroke="#221c18" stroke-width="3"/>
           <circle cx="220" cy="200" r="146" fill="none" stroke="#221c18" stroke-width="2" stroke-dasharray="3 10" stroke-linecap="round" opacity=".45"/>
           <!-- Flammen -->
           <g stroke="#221c18" stroke-width="4" stroke-linejoin="round">
-            <path class="flame" d="M150 356c-16-18-6-38 6-50 0 14 10 18 14 10 8 14 10 30-2 40z" fill="#c8352b"/>
+            <path class="flame" d="M150 356c-16-18-6-38 6-50 0 14 10 18 14 10 8 14 10 30-2 40z" fill="#e8622a"/>
             <path class="flame f2" d="M204 362c-22-22-8-50 10-64-2 18 12 22 16 10 12 18 14 40-4 54z" fill="#c8352b"/>
-            <path class="flame f3" d="M268 356c-16-18-6-38 6-50 0 14 10 18 14 10 8 14 10 30-2 40z" fill="#c8352b"/>
-            <path class="flame f2" d="M212 356c-8-10-2-22 6-28 0 8 6 10 8 4 6 10 4 20-2 24z" fill="#f2b134" stroke-width="3"/>
+            <path class="flame f3" d="M268 356c-16-18-6-38 6-50 0 14 10 18 14 10 8 14 10 30-2 40z" fill="#e8622a"/>
+            <path class="flame f2" d="M212 356c-8-10-2-22 6-28 0 8 6 10 8 4 6 10 4 20-2 24z" fill="#ffd34d" stroke-width="3"/>
+            <path class="flame f3" d="M156 352c-5-6-1-14 4-18 0 5 4 6 5 2 4 6 3 12-1 16z" fill="#ffd34d" stroke-width="3"/>
+            <path class="flame" d="M274 352c-5-6-1-14 4-18 0 5 4 6 5 2 4 6 3 12-1 16z" fill="#ffd34d" stroke-width="3"/>
           </g>
           <!-- Nudeln & Zutaten (wippen) -->
           <g class="bob">
             <g fill="none" stroke-linecap="round">
               <path d="M120 212c10-60 40-100 70-96s28 56 6 70-40-30-10-78c20-32 70-40 90-6s-6 70-26 62 0-70 44-78 58 40 40 124" stroke="#221c18" stroke-width="13"/>
-              <path d="M120 212c10-60 40-100 70-96s28 56 6 70-40-30-10-78c20-32 70-40 90-6s-6 70-26 62 0-70 44-78 58 40 40 124" stroke="#fbe3a8" stroke-width="7"/>
+              <path d="M120 212c10-60 40-100 70-96s28 56 6 70-40-30-10-78c20-32 70-40 90-6s-6 70-26 62 0-70 44-78 58 40 40 124" stroke="#e9b85c" stroke-width="7"/>
               <path d="M150 214c0-40 30-66 52-58s10 40-8 34" stroke="#221c18" stroke-width="12"/>
-              <path d="M150 214c0-40 30-66 52-58s10 40-8 34" stroke="#f6d27a" stroke-width="6"/>
+              <path d="M150 214c0-40 30-66 52-58s10 40-8 34" stroke="#c98a3a" stroke-width="6"/>
             </g>
-            <!-- Paprika -->
-            <path d="M96 118l24-8 8 22-24 8z" fill="#c8352b" stroke="#221c18" stroke-width="4" stroke-linejoin="round"/>
+            <!-- rote Paprika -->
+            <path d="M96 118l24-8 8 22-24 8z" fill="#d8412f" stroke="#221c18" stroke-width="4" stroke-linejoin="round"/>
+            <!-- gelbe Paprika -->
+            <path d="M372 150l20 4-4 22-20-4z" fill="#f5c02c" stroke="#221c18" stroke-width="4" stroke-linejoin="round"/>
+            <!-- Champignon-Scheibe -->
+            <g stroke="#221c18" stroke-width="4" stroke-linejoin="round">
+              <path d="M58 160c0-16 12-26 26-26s26 10 26 26z" fill="#a8714a"/>
+              <path d="M74 160h20v14a4 4 0 0 1-4 4h-12a4 4 0 0 1-4-4z" fill="#f1e2c6"/>
+              <path d="M66 156c4-10 11-15 18-15s14 5 18 15z" fill="#f1e2c6" stroke-width="3"/>
+            </g>
             <!-- Brokkoli -->
             <g stroke="#221c18" stroke-width="4" stroke-linejoin="round">
               <path d="M338 132l-8 22" stroke-width="8"/>
-              <path d="M338 132l-8 22" stroke="#7fb069" stroke-width="3"/>
-              <path d="M322 128c-10-2-10-16 0-18 0-10 14-12 18-4 8-6 20 2 16 12 8 4 4 16-6 14-6 6-22 6-28-4z" fill="#3f8f5f"/>
+              <path d="M338 132l-8 22" stroke="#8cc26a" stroke-width="3"/>
+              <path d="M322 128c-10-2-10-16 0-18 0-10 14-12 18-4 8-6 20 2 16 12 8 4 4 16-6 14-6 6-22 6-28-4z" fill="#3f8f4a"/>
             </g>
+            <!-- grüne Bohnen -->
+            <g stroke-linecap="round">
+              <path d="M112 50l-8 30M364 88l24 14" stroke="#221c18" stroke-width="13"/>
+              <path d="M112 50l-8 30M364 88l24 14" stroke="#5aa04a" stroke-width="7"/>
+            </g>
+            <!-- rote Zwiebel -->
+            <circle cx="242" cy="30" r="11" fill="none" stroke="#221c18" stroke-width="10"/>
+            <circle cx="242" cy="30" r="11" fill="none" stroke="#8e3b6e" stroke-width="5"/>
+            <!-- Karotte -->
+            <circle cx="206" cy="46" r="9" fill="#ee7d2b" stroke="#221c18" stroke-width="3.5"/>
+            <circle cx="206" cy="46" r="3.5" fill="#f7a85c"/>
             <!-- Garnele -->
             <path d="M262 70c14-10 34-4 36 14 1 10-6 16-14 14 8-4 8-14 0-18-8-4-16 0-22 6z" fill="#f08a5d" stroke="#221c18" stroke-width="4" stroke-linejoin="round"/>
-            <!-- Frühlingszwiebel -->
+            <!-- Erbsen & Frühlingszwiebel -->
             <circle cx="150" cy="80" r="9" fill="#9bd07a" stroke="#221c18" stroke-width="4"/><circle cx="150" cy="80" r="3" fill="#fffaf1"/>
-            <circle cx="360" cy="196" r="8" fill="#9bd07a" stroke="#221c18" stroke-width="4"/><circle cx="360" cy="196" r="2.5" fill="#fffaf1"/>
-            <circle cx="206" cy="46" r="7" fill="#c8352b" stroke="#221c18" stroke-width="3.5"/>
+            <circle cx="360" cy="196" r="7" fill="#7cc45a" stroke="#221c18" stroke-width="3.5"/>
+            <circle cx="84" cy="196" r="7" fill="#7cc45a" stroke="#221c18" stroke-width="3.5"/>
+            <circle cx="310" cy="40" r="6" fill="#7cc45a" stroke="#221c18" stroke-width="3"/>
           </g>
-          <!-- Wok -->
-          <path d="M392 224l40-16" stroke="#221c18" stroke-width="16" stroke-linecap="round"/>
-          <path d="M392 224l40-16" stroke="#6b4a33" stroke-width="8" stroke-linecap="round"/>
-          <path d="M72 214h328c0 58-72 96-164 96S72 272 72 214z" fill="#2e2621" stroke="#221c18" stroke-width="4"/>
-          <path d="M102 240c30 30 110 44 176 26" fill="none" stroke="#5a4a40" stroke-width="7" stroke-linecap="round"/>
+          <!-- Gemüse im Wok -->
+          <g stroke="#221c18" stroke-width="3.5" stroke-linejoin="round">
+            <ellipse cx="112" cy="208" rx="18" ry="12" fill="#3f8f4a"/>
+            <ellipse cx="146" cy="204" rx="16" ry="11" fill="#d8412f"/>
+            <path d="M166 212c0-14 10-22 22-22s22 8 22 22z" fill="#a8714a"/>
+            <ellipse cx="226" cy="206" rx="15" ry="10" fill="#f5c02c"/>
+            <ellipse cx="258" cy="208" rx="17" ry="11" fill="#3f8f4a"/>
+            <ellipse cx="292" cy="204" rx="14" ry="10" fill="#ee7d2b"/>
+            <path d="M306 212c0-12 9-20 20-20s20 8 20 20z" fill="#f1e2c6"/>
+            <ellipse cx="362" cy="208" rx="16" ry="10" fill="#d8412f"/>
+          </g>
+          <!-- Wok mit Holzgriff -->
+          <path d="M392 224l14-6" stroke="#221c18" stroke-width="16" stroke-linecap="round"/>
+          <path d="M392 224l14-6" stroke="#a9a39b" stroke-width="8" stroke-linecap="round"/>
+          <path d="M410 216l26-11" stroke="#221c18" stroke-width="20" stroke-linecap="round"/>
+          <path d="M410 216l26-11" stroke="#d9a55b" stroke-width="12" stroke-linecap="round"/>
+          <path d="M72 214h328c0 58-72 96-164 96S72 272 72 214z" fill="#3a2e27" stroke="#221c18" stroke-width="4"/>
+          <path d="M102 240c30 30 110 44 176 26" fill="none" stroke="#7a5c45" stroke-width="7" stroke-linecap="round"/>
           <rect x="64" y="204" width="344" height="18" rx="9" fill="#221c18"/>
+          <rect x="72" y="208" width="328" height="5" rx="2.5" fill="#8a6a50"/>
           <!-- Dampf -->
           <g class="steam" fill="none" stroke="#fffaf1" stroke-width="5" stroke-linecap="round">
             <path d="M110 190c-8-10 8-16 0-28"/>
