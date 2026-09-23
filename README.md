@@ -1,6 +1,6 @@
-# EB Flächenreinigung mit Hochdruck & Schneedienst — Landing Page
+# EB Flächenreinigung mit Hochdruck — Landing Page
 
-Einseitige Landing Page in Babyblau/Weiß mit Splash-Design: 3 € pro m², ab 45 m², 150 km Umkreis.
+Einseitige Landing Page in Babyblau/Weiß mit Splash-Design für die Flächenreinigung mit Hochdruck im Frühjahr 2027: 3 € pro m², ab 5 m² im Umkreis von 100 km um Erbach (Odenwald), ab 45 m² bis 150 km.
 Alles steckt in `index.html` (HTML, CSS und JS), extern geladen wird nur die Schrift *Nunito* von Google Fonts.
 
 Live über GitHub Pages: https://emilianbleimn.github.io/EB-Hochdruckreiniger/

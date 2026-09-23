@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flächenreinigung mit Hochdruck &amp; Schneedienst · Erbach · 3 € pro m²</title>
-  <meta name="description" content="Flächenreinigung mit Hochdruck und Schneedienst für Terrasse, Einfahrt, Hof, Wege und Treppen: 3 € pro m², ab 5 m², im Umkreis von bis zu 150 km um Erbach (Odenwald). Jetzt Anfrage mit Fotos senden." />
+  <title>Flächenreinigung mit Hochdruck · Erbach · 3 € pro m² · Frühjahr 2027</title>
+  <meta name="description" content="Flächenreinigung mit Hochdruck für Terrasse, Einfahrt, Hof, Wege und Treppen: 3 € pro m², ab 5 m², im Umkreis von bis zu 150 km um Erbach (Odenwald). Jetzt Termin fürs Frühjahr 2027 anfragen." />
   <meta name="theme-color" content="#89cff0" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/logo-icon-512.png" />
@@ -184,23 +184,9 @@
     .distance--out { background: #fdecea; border-color: #f2b8b1; color: var(--error); }
     .distance--out svg { color: var(--error); }
 
-    /* ---------- Winterdienst ---------- */
-    .winter { padding: 70px 0 0; }
-    .winter__box { position: relative; overflow: hidden; overflow: clip; display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: center; background: linear-gradient(135deg, var(--blue-dark), #1f5f8f); color: var(--white); border-radius: 28px; padding: clamp(24px, 5vw, 48px); box-shadow: var(--shadow); }
-    .winter__box h2 { font-size: clamp(1.7rem, 3.6vw, 2.4rem); font-weight: 900; line-height: 1.1; }
-    .winter__box p { margin-top: 10px; color: #d6ebf8; font-weight: 600; }
-    .winter__list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-top: 18px; font-weight: 800; }
-    .winter__list li { display: flex; align-items: center; gap: 8px; }
-    .winter__list svg { width: 18px; height: 18px; color: var(--baby); flex: none; }
-    .winter__side { text-align: center; }
-    .winter__price { font-size: 1.5rem; font-weight: 900; }
-    .winter__side small { display: block; color: #d6ebf8; font-weight: 600; margin: 4px 0 18px; }
-    .winter .btn { background: var(--white); color: var(--blue-dark); }
-    .flake { position: absolute; color: rgba(255,255,255,.12); pointer-events: none; }
-    .flake svg { width: 100%; height: 100%; }
-    .service { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
-    .service .area { display: flex; }
-    .service .area span { flex: 1; flex-direction: row; justify-content: center; padding: 14px 10px; }
+    .months { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 4px; }
+    .months .area { display: flex; }
+    .months .area span { flex: 1; padding: 12px 6px; }
 
     /* ---------- Referenzen & Bewertungen ---------- */
     .refs { padding: 80px 0 0; }
@@ -254,9 +240,10 @@
       .hero__grid { grid-template-columns: 1fr; margin-top: 36px; gap: 20px; }
       .hero h1 { font-size: min(3rem, calc((100vw - 32px) / 11)); }
       .price-drop { width: 240px; order: -1; }
-      .facts, .ba-grid, .reviews, .winter__box { grid-template-columns: 1fr; }
+      .facts, .ba-grid, .reviews { grid-template-columns: 1fr; }
       .row { grid-template-columns: 1fr; gap: 0; }
       .areas { grid-template-columns: repeat(2, 1fr); }
+      .months { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 420px) {
       .topbar__cta { display: none; }
@@ -293,20 +280,20 @@
     <div class="container">
       <div class="topbar">
         <a class="brand" href="#">
-          <img src="assets/logo-weiss.svg" alt="EB Flächenreinigung mit Hochdruck &amp; Schneedienst · Erbach" width="550" height="124" />
+          <img src="assets/logo-weiss.svg" alt="EB Flächenreinigung mit Hochdruck · Erbach" width="518" height="124" />
         </a>
         <a class="topbar__cta" href="#anfrage">Anfrage senden</a>
       </div>
 
       <div class="hero__grid">
         <div>
-          <h1>Flächenreinigung mit&nbsp;Hochdruck &amp;&nbsp;Schneedienst <span>aus Erbach im Odenwald.</span></h1>
-          <p class="hero__lead">Für Terrasse, Einfahrt, Hof, Wege und Treppen – im Sommer mit Hochdruck, im Winter mit dem Schneeschieber.</p>
+          <h1>Flächenreinigung mit&nbsp;Hochdruck <span>aus Erbach im Odenwald.</span></h1>
+          <p class="hero__lead">Für Terrasse, Einfahrt, Hof, Wege und Treppen. Sichere dir jetzt deinen Termin fürs Frühjahr 2027.</p>
           <div class="chips">
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 € pro m²</span>
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 5 m² im Umkreis von 100 km</span>
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 45 m² bis 150 km</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg>Schneedienst</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Termine ab März 2027</span>
           </div>
           <a class="btn" href="#anfrage">Jetzt Preis berechnen
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
@@ -352,30 +339,6 @@
       <div class="fact">
         <div class="fact__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div><strong>Ab 45 m² bis 150 km</strong><p>Größere Flächen ab 45 m² auch im Umkreis von 150 km.</p></div>
-      </div>
-    </section>
-
-    <section class="winter" id="winterdienst">
-      <div class="container">
-        <div class="winter__box">
-          <span class="flake" style="width:180px;height:180px;right:-30px;top:-40px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg></span>
-          <span class="flake" style="width:90px;height:90px;left:45%;bottom:-20px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg></span>
-          <div>
-            <h2>Auch im Winter für dich da: Schnee schieben</h2>
-            <p>Wir räumen Schnee, damit bei dir niemand ausrutscht – zum selben Preis wie die Flächenreinigung mit Hochdruck.</p>
-            <ul class="winter__list">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Einfahrt &amp; Hof</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gehwege</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Treppen</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Parkplätze</li>
-            </ul>
-          </div>
-          <div class="winter__side">
-            <div class="winter__price">3 € pro m²</div>
-            <small>ab 5 m² im Umkreis von 100 km</small>
-            <a class="btn" href="#anfrage" data-service="Schneedienst">Schneedienst anfragen</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -438,18 +401,10 @@
         -->
         <form class="form" id="form" action="https://formsubmit.co/DEINE-EMAIL@example.de" method="POST" enctype="multipart/form-data" novalidate>
           <div class="form__body">
-            <input type="hidden" name="_subject" value="Neue Anfrage: Flächenreinigung mit Hochdruck / Schneedienst" />
+            <input type="hidden" name="_subject" value="Neue Anfrage: Flächenreinigung mit Hochdruck (Frühjahr 2027)" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
-            <fieldset class="field" style="border:0">
-              <legend class="legend">Was brauchst du?</legend>
-              <div class="service">
-                <label class="area"><input type="radio" name="Leistung" value="Flächenreinigung mit Hochdruck" checked /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z"/></svg>Flächenreinigung mit Hochdruck</span></label>
-                <label class="area"><input type="radio" name="Leistung" value="Schneedienst" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5M3 10.3l3.3.9-.9 3.3M21 13.7l-3.3-.9.9-3.3"/></svg>Schneedienst</span></label>
-              </div>
-            </fieldset>
 
 
             <fieldset class="field" style="border:0" data-field="flaeche">
@@ -501,6 +456,17 @@
               <span class="estimate__value" id="estPrice">180 €</span>
             </div>
             <input type="hidden" name="Preis (Schätzung)" id="priceField" value="180 €" />
+
+            <fieldset class="field" style="border:0">
+              <legend class="legend">Wann soll es losgehen? <span class="opt">(Frühjahr 2027)</span></legend>
+              <div class="months">
+                <label class="area"><input type="radio" name="Wunschzeitraum" value="März" /><span>März</span></label>
+                <label class="area"><input type="radio" name="Wunschzeitraum" value="April" /><span>April</span></label>
+                <label class="area"><input type="radio" name="Wunschzeitraum" value="Mai" /><span>Mai</span></label>
+                <label class="area"><input type="radio" name="Wunschzeitraum" value="Juni" /><span>Juni</span></label>
+                <label class="area"><input type="radio" name="Wunschzeitraum" value="Egal" checked /><span>Egal</span></label>
+              </div>
+            </fieldset>
 
             <div class="field" data-field="name">
               <label for="name">Name</label>
@@ -560,7 +526,7 @@
 
   <footer class="footer">
     <div class="container">
-      <span>© <span id="year">2026</span> EB Flächenreinigung mit Hochdruck &amp; Schneedienst</span>
+      <span>© <span id="year">2026</span> EB Flächenreinigung mit Hochdruck</span>
       <span><button type="button" class="linklike" data-open="dlg">Impressum &amp; Datenschutz</button></span>
     </div>
   </footer>
@@ -568,7 +534,7 @@
   <dialog id="dlg" aria-labelledby="dlgTitle">
     <h3 id="dlgTitle">Impressum</h3>
     <p>
-      EB Flächenreinigung mit Hochdruck &amp; Schneedienst<br />
+      EB Flächenreinigung mit Hochdruck<br />
       Vorname Nachname<br />
       Straße Nr. · PLZ Ort<br />
       Telefon: 0000 000000 · E-Mail: info@example.de
@@ -736,19 +702,6 @@
       ["dragleave", "drop"].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove("is-over"); }); });
       drop.addEventListener("drop", function (ev) { ev.preventDefault(); addFiles(ev.dataTransfer.files); });
 
-      // Leistung: Flächenreinigung mit Hochdruck oder Schneedienst
-      function isWinter() { return !!document.querySelector('input[name="Leistung"][value="Schneedienst"]:checked'); }
-      function syncService() {
-        update(qm);
-      }
-      document.querySelectorAll('input[name="Leistung"]').forEach(function (r) { r.addEventListener("change", syncService); });
-      document.querySelectorAll("[data-service]").forEach(function (a) {
-        a.addEventListener("click", function () {
-          document.querySelector('input[name="Leistung"][value="' + a.getAttribute("data-service") + '"]').checked = true;
-          syncService();
-        });
-      });
-
       // Validierung + Versand
       var form = document.getElementById("form");
       function setErr(key, msg) {
@@ -778,7 +731,7 @@
           ev.preventDefault();
           var area = form.querySelector('input[name="Fläche"]:checked').value;
           var body = [
-            "Leistung: " + form.querySelector('input[name="Leistung"]:checked').value,
+            "Wunschzeitraum: " + form.querySelector('input[name="Wunschzeitraum"]:checked').value + " 2027",
             "Fläche: " + area,
             "Quadratmeter: " + n + " m²",
             "Preis (Schätzung): " + priceField.value,
@@ -790,7 +743,7 @@
             "Sonderwünsche: " + form["Sonderwünsche"].value,
             files.length ? "\n(Bitte " + files.length + " Foto(s) an diese E-Mail anhängen.)" : ""
           ].join("\n");
-          window.location.href = "mailto:info@example.de?subject=" + encodeURIComponent("Anfrage " + form.querySelector('input[name="Leistung"]:checked').value) + "&body=" + encodeURIComponent(body);
+          window.location.href = "mailto:info@example.de?subject=" + encodeURIComponent("Anfrage Flächenreinigung mit Hochdruck") + "&body=" + encodeURIComponent(body);
           form.classList.add("is-sent");
         }
       });
