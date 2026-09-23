@@ -3,446 +3,547 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dämmstoffe Weidenhof · Fachhandel für Dämmstoffe in Musterhausen</title>
-  <meta name="description" content="Dämmstoffe Weidenhof in Musterhausen: Wärmedämmung, Schallschutz und Brandschutz vom Keller bis zum Dach. Persönliche Beratung, komplettes Zubehör und ein praktischer Konfigurator." />
-  <meta name="theme-color" content="#0c0c0c" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23121212'/%3E%3Cg fill='none' stroke='white' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11l7-5 7 5'/%3E%3Cpath d='M6.5 10v8h11v-8'/%3E%3Cpath d='M6.5 13h11M6.5 15.5h11'/%3E%3C/g%3E%3C/svg%3E" />
+  <title>EB Hochdruckreinigung · 3 € pro m²</title>
+  <meta name="description" content="Professionelle Hochdruckreinigung für Terrasse, Einfahrt, Hof und Fassade: 3 € pro m², ab 45 m², im Umkreis von 150 km. Jetzt Anfrage mit Fotos senden." />
+  <meta name="theme-color" content="#89cff0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z' fill='%2389cff0'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <style>.preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#0c0c0c}.preloader.is-hidden{opacity:0;visibility:hidden}html.no-preloader .preloader{display:none}</style>
-  <script>(function(){try{var n=performance.getEntriesByType("navigation")[0];var t=n?n.type:((performance.navigation&&performance.navigation.type===1)?"reload":"navigate");var s=false;try{s=sessionStorage.getItem("wh-pre")==="1";}catch(e){}var show=(t==="reload")||!s;try{sessionStorage.setItem("wh-pre","1");}catch(e){}if(!show){document.documentElement.classList.add("no-preloader");}}catch(e){}})();</script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --baby: #89cff0;
+      --baby-soft: #d9f0fc;
+      --baby-mist: #f1f9fe;
+      --blue: #1f7bbf;
+      --blue-dark: #0f3a5c;
+      --white: #ffffff;
+      --text: #0f3a5c;
+      --muted: #4d6f89;
+      --line: #c4e4f6;
+      --error: #c0392b;
+      --radius: 22px;
+      --shadow: 0 18px 50px -20px rgba(15, 58, 92, .35);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--blue); }
+    .container { width: min(1080px, 100% - 32px); margin-inline: auto; }
+
+    /* ---------- HERO mit Splash ---------- */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      overflow: clip;
+      background: radial-gradient(120% 90% at 80% 10%, #bfe6fa 0%, var(--baby) 45%, #5fb6e6 100%);
+      color: var(--white);
+      padding: 28px 0 150px;
+    }
+    .hero__splash { position: absolute; z-index: -1; pointer-events: none; }
+    .hero__splash--a { width: 560px; right: -120px; top: -80px; opacity: .55; }
+    .hero__splash--b { width: 380px; left: -140px; bottom: 40px; opacity: .35; transform: rotate(160deg); }
+    .bubble {
+      position: absolute; z-index: -1; bottom: -40px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(255,255,255,.25) 60%, rgba(255,255,255,.08));
+      border: 1px solid rgba(255,255,255,.6);
+      animation: rise linear infinite;
+    }
+    @keyframes rise {
+      0%   { transform: translate(0, 0) scale(.8); opacity: 0; }
+      15%  { opacity: .9; }
+      100% { transform: translate(30px, -110vh) scale(1.1); opacity: 0; }
+    }
+    .hero__wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 120px; }
+
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 1.25rem; color: var(--white); text-decoration: none; letter-spacing: .2px; }
+    .brand svg { width: 34px; height: 34px; filter: drop-shadow(0 4px 10px rgba(15,58,92,.25)); }
+    .topbar__cta { color: var(--blue-dark); background: var(--white); padding: 10px 18px; border-radius: 999px; font-weight: 800; text-decoration: none; font-size: .95rem; box-shadow: var(--shadow); }
+
+    .hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; margin-top: 56px; }
+    .hero h1 { font-size: clamp(2.2rem, 5.4vw, 3.9rem); line-height: 1.05; font-weight: 900; text-shadow: 0 6px 30px rgba(15,58,92,.25); }
+    .hero h1 span { display: block; color: var(--blue-dark); text-shadow: none; }
+    .hero__lead { margin-top: 18px; font-size: 1.15rem; max-width: 34ch; color: #f4fbff; font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.55); backdrop-filter: blur(6px); padding: 8px 14px; border-radius: 999px; font-weight: 800; font-size: .95rem; }
+    .chip svg { width: 18px; height: 18px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--blue); color: var(--white); border: 0; cursor: pointer;
+      padding: 16px 28px; border-radius: 999px; font: inherit; font-weight: 800; font-size: 1.05rem;
+      text-decoration: none; box-shadow: 0 14px 30px -12px rgba(31,123,191,.8);
+      transition: transform .2s, box-shadow .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); background: #1a6eab; }
+    .btn:focus-visible, .topbar__cta:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+    .hero .btn { margin-top: 30px; background: var(--white); color: var(--blue); }
+
+    .price-drop { position: relative; width: min(340px, 100%); justify-self: center; }
+    .price-drop svg { width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(15,58,92,.3)); }
+    .price-drop__txt { position: absolute; inset: 30% 0 0; text-align: center; color: var(--blue-dark); }
+    .price-drop__big { font-size: clamp(4rem, 9vw, 5.6rem); font-weight: 900; line-height: 1; }
+    .price-drop__big small { font-size: .45em; vertical-align: top; margin-left: 2px; }
+    .price-drop__unit { font-weight: 800; font-size: 1.15rem; }
+    .price-drop__min { margin-top: 6px; font-size: .9rem; font-weight: 700; color: var(--muted); }
+
+    /* ---------- Kurzinfos ---------- */
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: -70px; position: relative; z-index: 2; }
+    .fact { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); display: flex; gap: 14px; align-items: flex-start; }
+    .fact__ico { flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--baby-soft); display: grid; place-items: center; color: var(--blue); }
+    .fact__ico svg { width: 24px; height: 24px; }
+    .fact strong { display: block; font-size: 1.1rem; font-weight: 900; }
+    .fact p { color: var(--muted); font-size: .95rem; }
+
+    /* ---------- Formular ---------- */
+    .contact { position: relative; padding: 80px 0 90px; overflow: hidden; overflow: clip; }
+    .contact__splash { position: absolute; width: 520px; left: -200px; top: 60px; opacity: .5; z-index: -1; }
+    .contact__splash--r { left: auto; right: -220px; top: auto; bottom: -60px; transform: scaleX(-1); }
+    .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; text-align: center; }
+    .contact__sub { text-align: center; color: var(--muted); margin-top: 8px; font-weight: 600; }
+
+    .form { margin: 36px auto 0; max-width: 760px; background: var(--white); border: 1px solid var(--line); border-radius: 28px; padding: clamp(20px, 4vw, 40px); box-shadow: var(--shadow); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+    .field > label, .legend { font-weight: 800; font-size: .95rem; }
+    .field > label .opt, .legend .opt { font-weight: 600; color: var(--muted); }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+      width: 100%; font: inherit; color: var(--text); background: var(--baby-mist);
+      border: 2px solid var(--line); border-radius: 14px; padding: 12px 14px; transition: border-color .2s, background .2s;
+    }
+    input:focus, textarea:focus { outline: none; border-color: var(--blue); background: var(--white); }
+    textarea { min-height: 110px; resize: vertical; }
+    .field.is-invalid input, .field.is-invalid textarea { border-color: var(--error); }
+    .err { color: var(--error); font-size: .85rem; font-weight: 700; min-height: 0; }
+
+    .areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 4px; }
+    .area input { position: absolute; opacity: 0; pointer-events: none; }
+    .area span {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center;
+      padding: 14px 8px; border: 2px solid var(--line); border-radius: 16px; background: var(--baby-mist);
+      font-weight: 800; font-size: .92rem; cursor: pointer; transition: all .2s;
+    }
+    .area span svg { width: 28px; height: 28px; color: var(--blue); }
+    .area input:checked + span { border-color: var(--blue); background: var(--baby-soft); box-shadow: 0 0 0 3px rgba(31,123,191,.15); }
+    .area input:focus-visible + span { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+    .sqm { display: grid; grid-template-columns: 1fr 130px; gap: 16px; align-items: center; }
+    input[type="range"] { width: 100%; accent-color: var(--blue); height: 28px; }
+    .sqm__num { position: relative; }
+    .sqm__num input { padding-right: 42px; font-weight: 800; }
+    .sqm__num em { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-style: normal; color: var(--muted); font-weight: 700; }
+
+    .estimate { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: linear-gradient(120deg, var(--baby-soft), var(--baby-mist)); border: 2px dashed var(--baby); border-radius: 18px; padding: 16px 20px; margin-bottom: 22px; }
+    .estimate__label { font-weight: 700; color: var(--muted); }
+    .estimate__value { font-size: 1.8rem; font-weight: 900; color: var(--blue); }
+
+    .drop {
+      position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px;
+      border: 2px dashed var(--baby); border-radius: 18px; background: var(--baby-mist);
+      padding: 22px; text-align: center; cursor: pointer; transition: background .2s, border-color .2s;
+    }
+    .drop:hover, .drop.is-over { background: var(--baby-soft); border-color: var(--blue); }
+    .drop svg { width: 36px; height: 36px; color: var(--blue); }
+    .drop strong { font-weight: 800; }
+    .drop small { color: var(--muted); font-weight: 600; }
+    .drop input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .thumb { position: relative; width: 78px; height: 78px; border-radius: 12px; overflow: hidden; border: 2px solid var(--line); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .thumb button { position: absolute; top: 3px; right: 3px; width: 22px; height: 22px; border-radius: 50%; border: 0; background: rgba(15,58,92,.8); color: #fff; font-weight: 900; cursor: pointer; line-height: 22px; font-size: 14px; }
+
+    .check { display: flex; gap: 10px; align-items: flex-start; font-size: .92rem; color: var(--muted); font-weight: 600; margin-bottom: 18px; }
+    .check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--blue); flex: none; }
+    .form .btn { width: 100%; }
+    .form__note { text-align: center; margin-top: 12px; font-size: .85rem; color: var(--muted); }
+    .success { display: none; text-align: center; padding: 30px 10px; }
+    .success svg { width: 70px; height: 70px; color: var(--blue); }
+    .success h3 { font-size: 1.6rem; font-weight: 900; margin-top: 10px; }
+    .form.is-sent .success { display: block; }
+    .form.is-sent .form__body { display: none; }
+
+    /* ---------- Footer ---------- */
+    .footer { background: var(--blue-dark); color: #cfe6f5; padding: 26px 0; font-size: .9rem; }
+    .footer .container { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .footer a { color: var(--white); font-weight: 700; }
+    .footer button.linklike { background: none; border: 0; color: var(--white); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+
+    dialog { border: 0; border-radius: 20px; padding: 28px; max-width: 560px; width: calc(100% - 32px); color: var(--text); box-shadow: var(--shadow); }
+    dialog::backdrop { background: rgba(15,58,92,.45); backdrop-filter: blur(3px); }
+    dialog h3 { font-weight: 900; margin: 14px 0 6px; }
+    dialog h3:first-child { margin-top: 0; }
+    dialog p { font-size: .92rem; color: var(--muted); }
+    dialog .btn { margin-top: 20px; padding: 10px 22px; font-size: .95rem; }
+
+    @media (max-width: 820px) {
+      .hero { padding-bottom: 130px; }
+      .hero__grid { grid-template-columns: 1fr; margin-top: 36px; gap: 20px; }
+      .price-drop { width: 240px; order: -1; }
+      .facts { grid-template-columns: 1fr; }
+      .row { grid-template-columns: 1fr; gap: 0; }
+      .areas { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 420px) {
+      .topbar__cta { display: none; }
+      .sqm { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .bubble { display: none; }
+      .btn { transition: none; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Ladebildschirm (zeigt sich bei jedem Seitenaufruf, blendet nach dem Laden aus) -->
-  <div class="preloader" id="preloader" role="status" aria-label="Seite wird geladen">
-    <div class="preloader__inner">
-      <img class="preloader__logo" src="assets/img/logo.svg" alt="Dämmstoffe Weidenhof" width="200" height="50" />
-      <div class="preloader__bar"><span></span></div>
-    </div>
-  </div>
-  <div class="scroll-progress" aria-hidden="true"></div>
+  <!-- Wiederverwendbare Splash-Form -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="splash" viewBox="0 0 400 400">
+        <path fill="currentColor" d="M205 58c22-30 38 8 30 34-6 20 18 26 34 12 22-20 50-6 36 20-10 18 8 30 28 24 34-10 42 28 14 42-20 10-14 32 8 38 30 8 20 44-8 40-22-3-30 16-16 32 20 22-6 46-30 28-18-14-34-2-34 20 0 30-34 36-42 8-6-20-26-22-38-6-18 24-50 10-38-18 8-20-6-34-26-26-30 12-44-22-18-36 18-10 12-30-8-34-30-6-28-42 2-42 22 0 26-20 12-36-20-22 6-50 30-30 18 14 34 6 34-16 0-26 30-34 42-12 8 14 20 12 28 0z"/>
+        <circle fill="currentColor" cx="330" cy="70" r="14"/>
+        <circle fill="currentColor" cx="360" cy="120" r="7"/>
+        <circle fill="currentColor" cx="60" cy="320" r="12"/>
+        <circle fill="currentColor" cx="40" cy="280" r="6"/>
+        <circle fill="currentColor" cx="300" cy="360" r="9"/>
+        <circle fill="currentColor" cx="92" cy="60" r="8"/>
+      </symbol>
+    </defs>
+  </svg>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Dämmstoffe Weidenhof – Startseite">
-        <img class="brand-logo" src="assets/img/logo.svg" alt="Dämmstoffe Weidenhof – Fachhandel für Dämmstoffe" width="184" height="46" />
-      </a>
+  <header class="hero">
+    <svg class="hero__splash hero__splash--a" style="color:#fff" aria-hidden="true"><use href="#splash"/></svg>
+    <svg class="hero__splash hero__splash--b" style="color:#fff" aria-hidden="true"><use href="#splash"/></svg>
+    <div id="bubbles" aria-hidden="true"></div>
 
-      <nav class="nav" id="mainnav" aria-label="Hauptnavigation">
-        <ul class="nav__list">
-          <li><a class="nav__link is-active" href="index.html">Startseite</a></li>
-          <li><a class="nav__link" href="konfigurator.html">Konfigurator</a></li>
-          <li><a class="nav__link" href="sortiment.html">Sortiment</a></li>
-          <li><a class="nav__link" href="index.html#referenzen">Bewertungen</a></li>
-          <li><a class="nav__link" href="index.html#kontakt">Kontakt</a></li>
-          <li><a class="btn btn--accent" href="konfigurator.html">Jetzt konfigurieren</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a class="icon-btn desktop-only" href="index.html#kontakt" aria-label="Merkliste / Anfrage ansehen">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1h1.5A1.5 1.5 0 0 1 19 6.5V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6.5A1.5 1.5 0 0 1 6.5 5H8V4a1 1 0 0 1 1-1z"/><path d="M9 5h6"/><path d="M8.5 12l2 2 4-4"/></svg>
-          <span class="cart-count" aria-hidden="true">0</span>
+    <div class="container">
+      <div class="topbar">
+        <a class="brand" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z" fill="#fff"/><path d="M9 15a3 3 0 0 0 3 3" stroke="#89cff0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          EB Hochdruckreinigung
         </a>
-        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainnav">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="topbar__cta" href="#anfrage">Anfrage senden</a>
+      </div>
+
+      <div class="hero__grid">
+        <div>
+          <h1>Sauber mit Druck. <span>Wie neu in einem Tag.</span></h1>
+          <p class="hero__lead">Terrasse, Einfahrt, Hof oder Fassade: Wir entfernen Moos, Algen und Dreck gründlich und schonend.</p>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 € pro m²</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 45 m²</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>150 km Umkreis</span>
+          </div>
+          <a class="btn" href="#anfrage">Jetzt Preis berechnen
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+
+        <div class="price-drop" aria-label="Preis: 3 Euro pro Quadratmeter, ab 45 Quadratmeter">
+          <svg viewBox="0 0 200 250" aria-hidden="true">
+            <defs>
+              <linearGradient id="dropfill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset="1" stop-color="#e3f4fd"/>
+              </linearGradient>
+            </defs>
+            <path d="M100 6C100 6 16 110 16 162a84 84 0 0 0 168 0C184 110 100 6 100 6z" fill="url(#dropfill)"/>
+            <path d="M52 170a50 50 0 0 0 34 44" stroke="#89cff0" stroke-width="8" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div class="price-drop__txt">
+            <div class="price-drop__big">3<small>€</small></div>
+            <div class="price-drop__unit">pro m²</div>
+            <div class="price-drop__min">ab 45 m² · 135 €</div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <svg class="hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#fff" d="M0 64c120 30 240 44 360 30S600 30 720 34s240 50 360 56 240-22 360-40v70H0z"/>
+      <path fill="#fff" opacity=".5" d="M0 40c160 40 300 50 460 30s280-50 440-40 300 60 540 30v100H0z"/>
+    </svg>
   </header>
 
   <main>
-    <!-- ============ HERO (cinematic full-bleed) ============ -->
-    <section class="hero-lux" data-slider>
-      <div class="hero-lux__media" aria-hidden="true">
-        <div class="slide is-active" style="background-image:url('assets/img/store-02.svg')"></div>
-        <div class="slide" style="background-image:url('assets/img/store-04.svg')"></div>
-        <div class="slide" style="background-image:url('assets/img/store-03.svg')"></div>
+    <section class="container facts" aria-label="Das Wichtigste">
+      <div class="fact">
+        <div class="fact__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div><strong>3 € pro m²</strong><p>Fester Preis, keine versteckten Kosten.</p></div>
       </div>
-      <div class="hero-lux__scrim" aria-hidden="true"></div>
-      <div class="container hero-lux__inner">
-        <span class="eyebrow">Fachhandel für Dämmstoffe in Musterhausen</span>
-        <h1>Planen Sie Ihre<br /><span class="gradient-text">Dämmung Raum für Raum</span></h1>
-        <div class="hero__cta">
-          <a class="btn btn--accent btn--lg" href="konfigurator.html">Konfigurator starten</a>
-          <a class="btn btn--light btn--lg" href="sortiment.html">Sortiment ansehen</a>
-        </div>
-        <div class="zone-chips" aria-label="Dämmbereich wählen">
-          <a class="zone-chip" href="konfigurator.html?bereich=wand"><img src="assets/img/zones/walls.svg" alt="" aria-hidden="true" /><span>Wand</span></a>
-          <a class="zone-chip" href="konfigurator.html?bereich=dach"><img src="assets/img/zones/roof.svg" alt="" aria-hidden="true" /><span>Dach</span></a>
-          <a class="zone-chip" href="konfigurator.html?bereich=boden"><img src="assets/img/zones/floor.svg" alt="" aria-hidden="true" /><span>Boden</span></a>
-          <a class="zone-chip" href="konfigurator.html?bereich=keller"><img src="assets/img/zones/basement.svg" alt="" aria-hidden="true" /><span>Keller</span></a>
-        </div>
+      <div class="fact">
+        <div class="fact__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div><strong>Ab 45 m²</strong><p>Mindestfläche pro Auftrag – also ab 135 €.</p></div>
       </div>
-      <div class="slider-dots" aria-label="Bildauswahl">
-        <button class="is-active" type="button" aria-label="Bild 1"></button>
-        <button type="button" aria-label="Bild 2"></button>
-        <button type="button" aria-label="Bild 3"></button>
+      <div class="fact">
+        <div class="fact__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><strong>150 km Umkreis</strong><p>Wir kommen direkt zu dir vor Ort.</p></div>
       </div>
     </section>
 
-    <!-- ============ STRIP ============ -->
-    <div class="strip" aria-hidden="true">
-      <div class="strip__track">
-        <span class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Wärmedämmung</span>
-        <span class="strip__item">Schallschutz</span>
-        <span class="strip__item">Brandschutz</span>
-        <span class="strip__item">Putz &amp; Kleber</span>
-        <span class="strip__item">Befestigung</span>
-        <span class="strip__item">Werkzeug</span>
-        <span class="strip__item">Fassade</span>
-        <span class="strip__item">Dach &amp; Keller</span>
-        <span class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/></svg> Wärmedämmung</span>
-        <span class="strip__item">Schallschutz</span>
-        <span class="strip__item">Brandschutz</span>
-        <span class="strip__item">Putz &amp; Kleber</span>
-        <span class="strip__item">Befestigung</span>
-        <span class="strip__item">Werkzeug</span>
-        <span class="strip__item">Fassade</span>
-        <span class="strip__item">Dach &amp; Keller</span>
-      </div>
-    </div>
-
-    <!-- ============ LEISTUNGEN (real zone icons) ============ -->
-    <section class="section" id="leistungen">
+    <section class="contact" id="anfrage">
+      <svg class="contact__splash" style="color:var(--baby-soft)" aria-hidden="true"><use href="#splash"/></svg>
+      <svg class="contact__splash contact__splash--r" style="color:var(--baby-soft)" aria-hidden="true"><use href="#splash"/></svg>
       <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">Unser Sortiment</span>
-          <h2>Dämmung für jeden Bereich Ihres Hauses</h2>
-          <p>Ob Neubau oder Sanierung: Wählen Sie den Bereich, der ansteht – wir stellen Dämmstoff, Stärke und das passende Zubehör zusammen. Alles ab Lager in Musterhausen.</p>
-        </div>
-        <div class="grid grid--4">
-          <a class="card reveal" href="konfigurator.html?bereich=wand" style="--delay:0s">
-            <img class="zone-ico" src="assets/img/zones/walls.svg" alt="" aria-hidden="true" />
-            <h3>Wanddämmung</h3>
-            <p>Fassade von außen, Innendämmung im Bestand – für gleichmäßige Wärme und spürbar weniger Zugluft.</p>
-            <span class="link-arrow" style="margin-top:1rem">Konfigurieren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </a>
-          <a class="card reveal" href="konfigurator.html?bereich=dach" style="--delay:.08s">
-            <img class="zone-ico" src="assets/img/zones/roof.svg" alt="" aria-hidden="true" />
-            <h3>Dachdämmung</h3>
-            <p>Zwischen den Sparren, darüber oder darunter – und im Sommer bleibt das Dachgeschoss endlich nutzbar.</p>
-            <span class="link-arrow" style="margin-top:1rem">Konfigurieren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </a>
-          <a class="card reveal" href="konfigurator.html?bereich=boden" style="--delay:.16s">
-            <img class="zone-ico" src="assets/img/zones/floor.svg" alt="" aria-hidden="true" />
-            <h3>Bodendämmung</h3>
-            <p>Estrich, Geschossdecke, Trockenbau: Trittschall bleibt unten, die Wärme bleibt im Raum.</p>
-            <span class="link-arrow" style="margin-top:1rem">Konfigurieren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </a>
-          <a class="card reveal" href="konfigurator.html?bereich=keller" style="--delay:.24s">
-            <img class="zone-ico" src="assets/img/zones/basement.svg" alt="" aria-hidden="true" />
-            <h3>Kellerdämmung</h3>
-            <p>Perimeter und Kellerdecke – druckfest, feuchteunempfindlich und schnell selbst montiert.</p>
-            <span class="link-arrow" style="margin-top:1rem">Konfigurieren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </a>
-        </div>
-      </div>
-    </section>
+        <h2>Anfrage in 1 Minute</h2>
+        <p class="contact__sub">Fläche wählen, m² eintragen, Fotos dazu – wir melden uns mit einem Termin.</p>
 
-    <!-- ============ WAS UNS BESONDERS MACHT (Bild-Text-Strecke) ============ -->
-    <section class="section" style="background:var(--surface-2)" id="vorteile">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">Was Dämmstoffe Weidenhof besonders macht</span>
-          <h2>Drei Gründe, warum Bauherren zu uns kommen</h2>
-        </div>
-        <div class="editorial">
-          <article class="edi reveal">
-            <div class="edi__media"><img src="assets/img/about-02.svg" alt="Stapler im Lager von Dämmstoffe Weidenhof" loading="lazy" /></div>
-            <div class="edi__text">
-              <span class="edi__no">01</span>
-              <h3>Beratung, die beim Aufmaß anfängt</h3>
-              <p>Wer bei uns durch die Tür kommt, bekommt zuerst eine Frage gestellt – nämlich, was genau gedämmt werden soll. Aus Bestand, Aufbau und Budget ergibt sich der Dämmstoff, nicht umgekehrt. Wir rechnen Stärken und Mengen mit Ihnen durch, sagen offen, wenn eine günstigere Variante genügt, und ebenso deutlich, wenn sich der Aufpreis für bessere Werte über die Jahre rechnet. Am Ende gehen Sie mit einer Liste nach Hause, die zu Ihrer Baustelle passt und nicht zu unserem Lagerbestand.</p>
+        <!--
+          Formular-Versand: Trage unten in FORM_ENDPOINT deine E-Mail-Adresse ein
+          (FormSubmit.co – kostenlos, schickt die Anfrage inkl. Fotos als E-Mail).
+          Solange der Platzhalter drinsteht, öffnet das Formular stattdessen das E-Mail-Programm.
+        -->
+        <form class="form" id="form" action="https://formsubmit.co/DEINE-EMAIL@example.de" method="POST" enctype="multipart/form-data" novalidate>
+          <div class="form__body">
+            <input type="hidden" name="_subject" value="Neue Anfrage Hochdruckreinigung" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <fieldset class="field" style="border:0" data-field="flaeche">
+              <legend class="legend">Welche Fläche?</legend>
+              <div class="areas">
+                <label class="area"><input type="radio" name="Fläche" value="Terrasse" checked /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V10l7-5 7 5v10M9 20v-5h6v5"/></svg>Terrasse</span></label>
+                <label class="area"><input type="radio" name="Fläche" value="Einfahrt / Hof" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="6" rx="2"/><path d="M5 11l2-5h10l2 5M7 17v2M17 17v2"/></svg>Einfahrt / Hof</span></label>
+                <label class="area"><input type="radio" name="Fläche" value="Fassade" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"/></svg>Fassade</span></label>
+                <label class="area"><input type="radio" name="Fläche" value="Dach" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13 12 5l10 8M5 11v8h14v-8"/></svg>Dach</span></label>
+                <label class="area"><input type="radio" name="Fläche" value="Gehweg / Treppe" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h5v-5h5v-5h5V5h3"/></svg>Weg / Treppe</span></label>
+                <label class="area"><input type="radio" name="Fläche" value="Sonstiges" /><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>Sonstiges</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field" data-field="qm">
+              <label for="qm">Wie viele Quadratmeter?</label>
+              <div class="sqm">
+                <input type="range" id="qmRange" min="45" max="500" step="1" value="60" aria-label="Quadratmeter einstellen" />
+                <div class="sqm__num"><input type="number" id="qm" name="Quadratmeter" min="45" step="1" value="60" inputmode="numeric" required /><em>m²</em></div>
+              </div>
+              <span class="err" id="qmErr"></span>
             </div>
-          </article>
-          <article class="edi reveal">
-            <div class="edi__media"><img src="assets/img/about-01.svg" alt="Dämmstoffe und Zubehör im Lager" loading="lazy" /></div>
-            <div class="edi__text">
-              <span class="edi__no">02</span>
-              <h3>Vom Dämmstoff bis zur letzten Schraube</h3>
-              <p>Eine Dämmung scheitert selten an der Platte, sondern an dem, was fehlt: der passende Kleber, genug Dübel, das richtige Gewebe, ein Messer, das nach zehn Metern noch schneidet. Deshalb führen wir nicht nur Mineralwolle, EPS, XPS, PIR und Holzfaser, sondern auch Putze, Armierung, Befestigung, Dichtbänder und Werkzeug. Sie holen alles in einer Fahrt ab – und wenn doch etwas fehlt, legen wir es bis zum nächsten Morgen zurück.</p>
+
+            <div class="estimate" aria-live="polite">
+              <span class="estimate__label">Dein Preis (3 € × <b id="estQm">60</b> m²)</span>
+              <span class="estimate__value" id="estPrice">180 €</span>
             </div>
-          </article>
-          <article class="edi reveal">
-            <div class="edi__media"><img src="assets/img/about-03.svg" alt="Regale mit Dämmmaterial im Fachhandel" loading="lazy" /></div>
-            <div class="edi__text">
-              <span class="edi__no">03</span>
-              <h3>Zuhause in Musterhausen und im Auental</h3>
-              <p>Unser Lager liegt im Gewerbegebiet Nord an der Industriestraße, fünf Minuten von der Ausfahrt Musterhausen-Ost und mit dem Anhänger bequem erreichbar. Die Rampe ist überdacht, der Stapler lädt Ihnen auf, und für größere Mengen liefern wir im Umkreis von 40 Kilometern auf die Baustelle. Wer es entspannter mag, parkt danach am Auenpark – der Uferweg entlang der Ems und die Gassen der Altstadt sind ein guter Ausgleich zum Baustellentag.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+            <input type="hidden" name="Preis (Schätzung)" id="priceField" value="180 €" />
 
-    <!-- ============ STATEMENT-BAND ============ -->
-    <section class="feature-band" style="--photo:url('../assets/img/store-04.svg')">
-      <div class="feature-band__scrim" aria-hidden="true"></div>
-      <div class="container feature-band__inner reveal">
-        <span class="eyebrow">Fachhandel · Musterhausen</span>
-        <h2>Dämmen, kleben, befestigen –<br />alles unter einem Dach.</h2>
-      </div>
-    </section>
-
-    <!-- ============ KONFIGURATOR TEASER ============ -->
-    <section class="section" id="konfigurator">
-      <div class="container split">
-        <div class="reveal">
-          <span class="eyebrow">Konfigurator</span>
-          <h2>Unser Konfigurator</h2>
-          <p class="lead" style="margin-top:1rem">In drei Schritten zu einer ersten Einschätzung: Bereich, Fläche, Anspruch – fertig. Sie sehen sofort einen passenden Dämmstoff, eine sinnvolle Stärke und einen Richtwert für das Material. Der Konfigurator ersetzt keine Planung, aber er gibt Ihnen eine belastbare Größenordnung, bevor Sie zu uns kommen.</p>
-          <ul class="bullets">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Bereich wählen</strong>Wand, Dach, Boden oder Keller.</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Fläche angeben</strong>Quadratmeter eintragen – den Verschnitt rechnen wir dazu.</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Empfehlung erhalten</strong>Dämmstoff, Stärke und Richtpreis – direkt als Merkliste für Ihre Anfrage.</span></li>
-          </ul>
-          <a class="btn btn--lg" href="konfigurator.html" style="margin-top:1.8rem">Zum Konfigurator</a>
-        </div>
-
-        <div class="reveal" style="--delay:.12s">
-          <div class="config-shell" style="box-shadow:var(--shadow-lg)">
-            <ul class="config-progress">
-              <li class="active"><span class="dot">1</span><span class="label-text">Bereich</span></li>
-              <li><span class="dot">2</span><span class="label-text">Fläche</span></li>
-              <li><span class="dot">3</span><span class="label-text">Anspruch</span></li>
-            </ul>
-            <div class="config-body">
-              <h3 style="margin-bottom:1.2rem">Welchen Bereich möchten Sie dämmen?</h3>
-              <div class="choice-grid">
-                <a class="choice selected" href="konfigurator.html?bereich=wand">
-                  <span class="choice__icon"><img class="zone-ico" style="width:56px;height:34px;margin:0" src="assets/img/zones/walls.svg" alt="" aria-hidden="true" /></span>
-                  <strong>Wand</strong><span>Fassade &amp; innen</span>
-                </a>
-                <a class="choice" href="konfigurator.html?bereich=dach">
-                  <span class="choice__icon"><img class="zone-ico" style="width:56px;height:34px;margin:0" src="assets/img/zones/roof.svg" alt="" aria-hidden="true" /></span>
-                  <strong>Dach</strong><span>Sparren &amp; Decke</span>
-                </a>
-                <a class="choice" href="konfigurator.html?bereich=boden">
-                  <span class="choice__icon"><img class="zone-ico" style="width:56px;height:34px;margin:0" src="assets/img/zones/floor.svg" alt="" aria-hidden="true" /></span>
-                  <strong>Boden</strong><span>Trittschall</span>
-                </a>
-                <a class="choice" href="konfigurator.html?bereich=keller">
-                  <span class="choice__icon"><img class="zone-ico" style="width:56px;height:34px;margin:0" src="assets/img/zones/basement.svg" alt="" aria-hidden="true" /></span>
-                  <strong>Keller</strong><span>Perimeter</span>
-                </a>
+            <div class="row">
+              <div class="field" data-field="name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" autocomplete="name" required />
+                <span class="err"></span>
+              </div>
+              <div class="field" data-field="ort">
+                <label for="ort">PLZ &amp; Ort des Einsatzes</label>
+                <input type="text" id="ort" name="Einsatzort" autocomplete="postal-code" placeholder="z. B. 12345 Musterstadt" required />
+                <span class="err"></span>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WIESO DÄMMUNG (real energy graphic) ============ -->
-    <section class="section" style="background:var(--surface-2)" id="warum-daemmen">
-      <div class="container split">
-        <div class="media-shot reveal">
-          <img src="assets/img/energy.svg" alt="Querschnitt eines gedämmten Hauses mit Energieeffizienzskala von A bis G" loading="lazy" />
-        </div>
-        <div class="reveal" style="--delay:.1s">
-          <span class="eyebrow">Wieso ist richtige Dämmung sinnvoll?</span>
-          <h2>Weniger Heizkosten, mehr Ruhe, trockene Wände</h2>
-          <ul class="bullets">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Wärme bleibt, wo sie hingehört</strong>Über ungedämmte Dachflächen, Außenwände und Kellerdecken verliert ein Haus einen erheblichen Teil seiner Heizwärme. Eine durchgehende Dämmhülle stoppt genau diese Verluste – und beseitigt nebenbei die kalten Wandflächen, an denen sich sonst Feuchtigkeit und Schimmel absetzen.</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Eine Investition, die mitläuft</strong>Die Dämmung arbeitet ab dem ersten Winter und hört nicht wieder auf. Jede Heizperiode zahlt einen Teil zurück, der Immobilienwert steigt, und bei einer ohnehin anstehenden Sanierung fallen nur die Mehrkosten für das Material an.</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><strong>Schallschutz und Brandschutz gleich mit</strong>Dieselbe Platte, die Wärme hält, dämpft auch Straßenlärm und Trittschall. Mineralische Dämmstoffe sind zudem nicht brennbar und verzögern im Ernstfall die Ausbreitung eines Feuers – ein Sicherheitsgewinn, den man nicht sieht, aber mitkauft.</span></li>
-          </ul>
-          <a class="btn btn--lg" href="#kontakt" style="margin-top:1.6rem">Jetzt beraten lassen</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BEWERTUNGEN (Referenzen) ============
-         Beispielhafte Kundenstimmen. Diese Seite ist eine Stilvorschau –
-         Unternehmen, Personen und Zitate sind frei erfunden. -->
-    <section class="section" id="referenzen">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">Referenzen</span>
-          <h2>Das sagen unsere Kunden</h2>
-          <p>Stimmen von Bauherrinnen, Bauherren und Handwerksbetrieben aus Musterhausen und dem Auental.</p>
-        </div>
-        <div class="reviews grid grid--3">
-          <figure class="review reveal">
-            <div class="review__stars" role="img" aria-label="5 von 5 Sternen">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-            </div>
-            <blockquote>Wir hatten nur eine grobe Vorstellung und sind mit einer fertigen Materialliste rausgegangen. Dass uns jemand von der teureren Platte abgeraten hat, weil sie für unseren Aufbau gar nichts bringt, rechnen wir hoch an.</blockquote>
-            <figcaption><strong>Katrin Sollinger</strong><span>Sanierung Einfamilienhaus, Musterhausen</span></figcaption>
-          </figure>
-          <figure class="review reveal" style="--delay:.08s">
-            <div class="review__stars" role="img" aria-label="5 von 5 Sternen">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-            </div>
-            <blockquote>Als Verarbeiter zählt für mich, dass die Ware da ist, wenn ich sie brauche. Bisher hat das jedes Mal geklappt, auch kurzfristig am Samstagmorgen. Die Rampe ist überdacht, das Aufladen dauert keine zehn Minuten.</blockquote>
-            <figcaption><strong>Milan Petrov</strong><span>Trockenbau Petrov, Auental</span></figcaption>
-          </figure>
-          <figure class="review reveal" style="--delay:.16s">
-            <div class="review__stars" role="img" aria-label="4 von 5 Sternen">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor" opacity=".28"><path d="m12 2 2.9 6.3 6.8.8-5 4.7 1.3 6.7L12 17.9 5.9 20.5l1.3-6.7-5-4.7 6.8-.8z"/></svg>
-            </div>
-            <blockquote>Der Konfigurator hat uns die erste Orientierung gegeben, den Rest haben wir vor Ort geklärt. Die Dachdämmung liegt seit zwei Wintern – das Schlafzimmer unterm Dach ist im Sommer endlich auszuhalten.</blockquote>
-            <figcaption><strong>Familie Ostermann</strong><span>Dachgeschossausbau, Rosenstein</span></figcaption>
-          </figure>
-        </div>
-        <div class="reviews-cta reveal">
-          <a class="btn btn--ghost" href="index.html#kontakt">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.9 6 6.1.9-4.5 4.3 1 6.8L12 18l-5.5 3 1-6.8L3 9.9 9.1 9z"/></svg>
-            Eigene Beratung anfragen
-          </a>
-          <p class="reviews-note">Beispielinhalte einer Stilvorschau – Unternehmen, Personen und Zitate auf dieser Seite sind frei erfunden.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EINBLICKE / GALERIE ============ -->
-    <section class="section" id="einblicke" style="padding-top:0">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">Einblicke</span>
-          <h2>Unser Fachhandel in Musterhausen</h2>
-        </div>
-        <div class="gallery">
-          <a class="gallery__item reveal" href="sortiment.html"><img src="assets/img/store-01.svg" alt="Dämmstoffe im Lager" loading="lazy" /><span class="gallery__cap">2.400 m² Lager</span></a>
-          <a class="gallery__item reveal" style="--delay:.08s" href="sortiment.html"><img src="assets/img/store-04.svg" alt="Regale mit Dämmmaterial" loading="lazy" /><span class="gallery__cap">Große Auswahl</span></a>
-          <a class="gallery__item reveal" style="--delay:.16s" href="index.html#kontakt"><img src="assets/img/store-02.svg" alt="Hochregallager mit Material" loading="lazy" /><span class="gallery__cap">Direkt ab Lager</span></a>
-          <a class="gallery__item reveal" style="--delay:.24s" href="sortiment.html"><img src="assets/img/store-03.svg" alt="Fachhandel vor Ort in Musterhausen" loading="lazy" /><span class="gallery__cap">Beratung vor Ort</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CTA BAND (real photo) ============ -->
-    <section class="section" style="padding-top:0">
-      <div class="container">
-        <div class="cta-band has-photo reveal" style="--photo:url('../assets/img/store-02.svg')">
-          <h2>Alles für Ihre Dämmung an einem Ort</h2>
-          <p>Kommen Sie zum Aufmaß-Gespräch vorbei oder schicken Sie uns Ihre Maße – Sie bekommen eine Materialliste, mit der Sie rechnen können.</p>
-          <div class="hero__cta">
-            <a class="btn btn--accent btn--lg" href="#kontakt">Kontakt aufnehmen</a>
-            <a class="btn btn--light btn--lg" href="konfigurator.html">Konfigurator starten</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ KONTAKT ============ -->
-    <section class="section" id="kontakt" style="background:var(--surface-2)">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Kontakt aufnehmen</span>
-          <h2>Sprechen wir über Ihr Projekt</h2>
-          <p>Schreiben Sie uns, was ansteht – Bereich, ungefähre Fläche, Zeitrahmen. Wir melden uns in der Regel am selben Werktag zurück.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <div class="info-item">
-              <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <div><div class="k">Adresse</div><a class="v" href="https://www.google.com/maps/search/?api=1&query=Industriestra%C3%9Fe+24+12345+Musterhausen" target="_blank" rel="noopener">Industriestraße 24<br />12345 Musterhausen</a></div>
-            </div>
-            <div class="info-item">
-              <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg></span>
-              <div><div class="k">Telefon</div><a class="v" href="tel:+491234567890">+49 1234 567890</a></div>
-            </div>
-            <div class="info-item">
-              <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <div><div class="k">E-Mail</div><a class="v" href="mailto:info@weidenhof-daemmstoffe.de">info@weidenhof-daemmstoffe.de</a></div>
-            </div>
-            <div class="info-item">
-              <span class="info-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></span>
-              <div><div class="k">Öffnungszeiten</div><span class="v">Mo–Fr 7:00–17:00 Uhr<br />Sa 8:00–12:00 Uhr</span></div>
-            </div>
-            <div class="map-embed">
-              <img class="map-fallback" src="assets/img/map.svg" alt="Karte mit dem Standort Industriestraße 24, 12345 Musterhausen" />
-            </div>
-          </div>
-
-          <div class="form-card reveal" style="--delay:.1s">
-            <div id="inquirySummary" class="inquiry-summary" style="display:none"></div>
-            <form id="contactForm" novalidate>
-              <div class="form-row">
-                <div class="field"><label for="vorname">Vorname *</label><input class="input" type="text" id="vorname" name="vorname" autocomplete="given-name" required /></div>
-                <div class="field"><label for="nachname">Nachname *</label><input class="input" type="text" id="nachname" name="nachname" autocomplete="family-name" required /></div>
+            <div class="row">
+              <div class="field" data-field="email">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+                <span class="err"></span>
               </div>
-              <div class="field"><label for="email">E-mail Adresse *</label><input class="input" type="email" id="email" name="email" autocomplete="email" required /></div>
-              <div class="field"><label for="betreff">Betreff</label><input class="input" type="text" id="betreff" name="betreff" placeholder="z. B. Beratung Fassadendämmung" /></div>
-              <div class="field"><label for="nachricht">Nachricht *</label><textarea class="input" id="nachricht" name="nachricht" rows="5" required placeholder="Beschreiben Sie kurz Ihr Vorhaben …"></textarea></div>
-              <button class="btn btn--lg btn--block" type="submit">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
-                Senden
-              </button>
-              <div id="formMsg" class="form-msg" role="status" aria-live="polite"></div>
-            </form>
+              <div class="field">
+                <label for="tel">Telefon <span class="opt">(optional)</span></label>
+                <input type="tel" id="tel" name="Telefon" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="wunsch">Sonderwünsche <span class="opt">(optional)</span></label>
+              <textarea id="wunsch" name="Sonderwünsche" placeholder="z. B. Fugen neu einsanden, Imprägnierung, Wunschtermin …"></textarea>
+            </div>
+
+            <div class="field">
+              <span class="legend">Fotos hinzufügen <span class="opt">(optional, max. 5)</span></span>
+              <label class="drop" id="drop">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <strong>Fotos auswählen oder hierher ziehen</strong>
+                <small>JPG, PNG oder HEIC · je max. 5 MB</small>
+                <input type="file" id="fotos" name="attachment" accept="image/*" multiple />
+              </label>
+              <div class="thumbs" id="thumbs"></div>
+              <span class="err" id="fotoErr"></span>
+            </div>
+
+            <label class="check" data-field="dsgvo">
+              <input type="checkbox" id="dsgvo" required />
+              <span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage gespeichert werden. <button type="button" class="linklike" data-open="dlg" style="background:none;border:0;color:var(--blue);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:0">Datenschutz</button></span>
+            </label>
+            <span class="err" id="dsgvoErr" style="display:block;margin:-10px 0 14px"></span>
+
+            <button class="btn" type="submit">Kostenlos anfragen
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+            </button>
+            <p class="form__note">Unverbindlich · Einsatz im Umkreis von 150 km · Mindestfläche 45 m²</p>
           </div>
-        </div>
+
+          <div class="success" role="status">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>
+            <h3>Danke! Anfrage ist raus.</h3>
+            <p>Wir melden uns so schnell wie möglich bei dir.</p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="brand" href="index.html" aria-label="Dämmstoffe Weidenhof">
-            <img class="brand-logo" src="assets/img/logo.svg" alt="Dämmstoffe Weidenhof" width="184" height="46" />
-          </a>
-          <p class="footer-about">Fachhandel für Dämmstoffe und Zubehör – vom Aufmaß bis zur Abholung an der Rampe.</p>
-          <div class="footer-social">
-            <a href="mailto:info@weidenhof-daemmstoffe.de" aria-label="E-Mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-            <a href="tel:+491234567890" aria-label="Telefon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7 12.8 12.8 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4 12.8 12.8 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"/></svg></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Links</h4>
-          <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="konfigurator.html">Konfigurator</a></li>
-            <li><a href="sortiment.html">Sortiment</a></li>
-            <li><a href="index.html#kontakt">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kontakt</h4>
-          <ul>
-            <li><a href="https://www.google.com/maps/search/?api=1&query=Industriestra%C3%9Fe+24+12345+Musterhausen" target="_blank" rel="noopener">Industriestraße 24<br />12345 Musterhausen</a></li>
-            <li><a href="tel:+491234567890">+49 1234 567890</a></li>
-            <li><a href="mailto:info@weidenhof-daemmstoffe.de">info@weidenhof-daemmstoffe.de</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Partner</h4>
-          <div class="footer-partners">
-            <img src="assets/img/partner-aurea.svg" alt="Aurea Systems" />
-            <img src="assets/img/partner-nordtherm.svg" alt="Nordtherm Baustoffe" />
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2025</span> Dämmstoffe Weidenhof · Demo-Website ohne realen Geschäftsbetrieb</span>
-        <span><a href="impressum.html">Impressum</a> · <a href="impressum.html#datenschutz">Datenschutzerklärung</a></span>
-      </div>
+      <span>© <span id="year">2026</span> EB Hochdruckreinigung</span>
+      <span><button type="button" class="linklike" data-open="dlg">Impressum &amp; Datenschutz</button></span>
     </div>
   </footer>
 
-  <button class="to-top" id="toTop" type="button" aria-label="Nach oben scrollen">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
-  </button>
+  <dialog id="dlg" aria-labelledby="dlgTitle">
+    <h3 id="dlgTitle">Impressum</h3>
+    <p>
+      EB Hochdruckreinigung<br />
+      Vorname Nachname<br />
+      Straße Nr. · PLZ Ort<br />
+      Telefon: 0000 000000 · E-Mail: info@example.de
+    </p>
+    <p><em>Platzhalter – bitte durch die echten Pflichtangaben ersetzen.</em></p>
+    <h3>Datenschutz</h3>
+    <p>Die Angaben aus dem Anfrageformular (inkl. Fotos) werden nur zur Bearbeitung deiner Anfrage verwendet und nicht an Dritte weitergegeben. Der Versand erfolgt über den Formular-Dienst FormSubmit.co. Die Schrift „Nunito“ wird von Google Fonts geladen.</p>
+    <form method="dialog"><button class="btn">Schließen</button></form>
+  </dialog>
 
-  <script src="js/main.js" defer></script>
+  <script>
+    (function () {
+      var PRICE = 3, MIN = 45, MAX_FILES = 5, MAX_MB = 5;
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Aufsteigende Wasserblasen im Hero
+      var bubbles = document.getElementById("bubbles");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        for (var i = 0; i < 16; i++) {
+          var b = document.createElement("span");
+          var s = 8 + Math.random() * 26;
+          b.className = "bubble";
+          b.style.width = b.style.height = s + "px";
+          b.style.left = Math.random() * 100 + "%";
+          b.style.animationDuration = 7 + Math.random() * 9 + "s";
+          b.style.animationDelay = -Math.random() * 12 + "s";
+          bubbles.appendChild(b);
+        }
+      }
+
+      // Dialog (Impressum/Datenschutz)
+      var dlg = document.getElementById("dlg");
+      document.querySelectorAll("[data-open]").forEach(function (el) {
+        el.addEventListener("click", function () { dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""); });
+      });
+
+      // Quadratmeter + Preis
+      var qm = document.getElementById("qm"), range = document.getElementById("qmRange");
+      var estQm = document.getElementById("estQm"), estPrice = document.getElementById("estPrice"), priceField = document.getElementById("priceField");
+      var fmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+      function update(from) {
+        var v = parseInt(from.value, 10);
+        if (from === range) qm.value = v;
+        else if (!isNaN(v)) range.value = Math.min(Math.max(v, MIN), +range.max);
+        var n = parseInt(qm.value, 10);
+        var ok = !isNaN(n) && n >= MIN;
+        estQm.textContent = isNaN(n) ? "–" : n;
+        estPrice.textContent = ok ? fmt.format(n * PRICE) : "ab " + fmt.format(MIN * PRICE);
+        priceField.value = estPrice.textContent;
+        if (ok) setErr("qm", "");
+      }
+      range.addEventListener("input", function () { update(range); });
+      qm.addEventListener("input", function () { update(qm); });
+
+      // Fotos
+      var fileInput = document.getElementById("fotos"), thumbs = document.getElementById("thumbs"), drop = document.getElementById("drop"), fotoErr = document.getElementById("fotoErr");
+      var files = [];
+      function syncFiles() {
+        var dt = new DataTransfer();
+        files.forEach(function (f) { dt.items.add(f); });
+        fileInput.files = dt.files;
+        thumbs.innerHTML = "";
+        files.forEach(function (f, idx) {
+          var d = document.createElement("div");
+          d.className = "thumb";
+          var img = document.createElement("img");
+          img.alt = f.name;
+          img.src = URL.createObjectURL(f);
+          img.onload = function () { URL.revokeObjectURL(img.src); };
+          var x = document.createElement("button");
+          x.type = "button";
+          x.textContent = "×";
+          x.setAttribute("aria-label", "Foto entfernen: " + f.name);
+          x.onclick = function () { files.splice(idx, 1); syncFiles(); };
+          d.appendChild(img); d.appendChild(x);
+          thumbs.appendChild(d);
+        });
+      }
+      function addFiles(list) {
+        var msg = "";
+        Array.prototype.forEach.call(list, function (f) {
+          if (!/^image\//.test(f.type) && !/\.(heic|heif)$/i.test(f.name)) { msg = "Nur Bilddateien sind erlaubt."; return; }
+          if (f.size > MAX_MB * 1024 * 1024) { msg = f.name + " ist größer als " + MAX_MB + " MB."; return; }
+          if (files.length >= MAX_FILES) { msg = "Maximal " + MAX_FILES + " Fotos."; return; }
+          files.push(f);
+        });
+        fotoErr.textContent = msg;
+        syncFiles();
+      }
+      fileInput.addEventListener("change", function () { addFiles(fileInput.files); });
+      ["dragenter", "dragover"].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.add("is-over"); }); });
+      ["dragleave", "drop"].forEach(function (e) { drop.addEventListener(e, function () { drop.classList.remove("is-over"); }); });
+      drop.addEventListener("drop", function (ev) { ev.preventDefault(); addFiles(ev.dataTransfer.files); });
+
+      // Validierung + Versand
+      var form = document.getElementById("form");
+      function setErr(key, msg) {
+        var f = form.querySelector('[data-field="' + key + '"]');
+        if (!f) return;
+        f.classList.toggle("is-invalid", !!msg);
+        var e = key === "qm" ? document.getElementById("qmErr") : key === "dsgvo" ? document.getElementById("dsgvoErr") : f.querySelector(".err");
+        if (e) e.textContent = msg;
+      }
+      form.addEventListener("submit", function (ev) {
+        var first = null;
+        function check(key, el, bad, msg) { setErr(key, bad ? msg : ""); if (bad && !first) first = el; }
+        var n = parseInt(qm.value, 10);
+        check("qm", qm, isNaN(n) || n < MIN, "Mindestfläche sind " + MIN + " m².");
+        check("name", form.Name, !form.Name.value.trim(), "Bitte gib deinen Namen an.");
+        check("ort", form.Einsatzort, !form.Einsatzort.value.trim(), "Bitte gib PLZ und Ort an.");
+        check("email", form.email, !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim()), "Bitte gib eine gültige E-Mail an.");
+        var dsgvo = document.getElementById("dsgvo");
+        check("dsgvo", dsgvo, !dsgvo.checked, "Bitte stimme der Verarbeitung zu.");
+        if (first) { ev.preventDefault(); first.focus(); return; }
+
+        // Noch kein Empfänger eingetragen → E-Mail-Programm öffnen
+        if (/DEINE-EMAIL@example\.de/.test(form.action)) {
+          ev.preventDefault();
+          var area = form.querySelector('input[name="Fläche"]:checked').value;
+          var body = [
+            "Fläche: " + area,
+            "Quadratmeter: " + n + " m²",
+            "Preis (Schätzung): " + priceField.value,
+            "Name: " + form.Name.value,
+            "Einsatzort: " + form.Einsatzort.value,
+            "E-Mail: " + form.email.value,
+            "Telefon: " + form.Telefon.value,
+            "Sonderwünsche: " + form["Sonderwünsche"].value,
+            files.length ? "\n(Bitte " + files.length + " Foto(s) an diese E-Mail anhängen.)" : ""
+          ].join("\n");
+          window.location.href = "mailto:info@example.de?subject=" + encodeURIComponent("Anfrage Hochdruckreinigung") + "&body=" + encodeURIComponent(body);
+          form.classList.add("is-sent");
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
