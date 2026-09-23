@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EB Hochdruckreinigung · 3 € pro m²</title>
-  <meta name="description" content="Professionelle Hochdruckreinigung für Terrasse, Einfahrt, Hof und Fassade: 3 € pro m², ab 45 m², im Umkreis von 150 km. Jetzt Anfrage mit Fotos senden." />
+  <meta name="description" content="Professionelle Hochdruckreinigung für Terrasse, Einfahrt, Hof und Fassade: 3 € pro m², ab 20 m², im Umkreis von 150 km um Erbach (Odenwald). Jetzt Anfrage mit Fotos senden." />
   <meta name="theme-color" content="#89cff0" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z' fill='%2389cff0'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -170,6 +170,48 @@
     .form.is-sent .success { display: block; }
     .form.is-sent .form__body { display: none; }
 
+    .row--plz { grid-template-columns: 140px 1fr; }
+    .distance { display: flex; align-items: center; gap: 10px; margin: -4px 0 20px; padding: 12px 16px; border-radius: 14px; background: var(--baby-mist); border: 2px solid var(--line); color: var(--muted); font-weight: 700; font-size: .92rem; }
+    .distance svg { width: 20px; height: 20px; flex: none; color: var(--blue); }
+    .distance--ok { background: #e8f7ee; border-color: #9fd8b4; color: #1e6b3d; }
+    .distance--ok svg { color: #1e8a4c; }
+    .distance--out { background: #fdecea; border-color: #f2b8b1; color: var(--error); }
+    .distance--out svg { color: var(--error); }
+
+    /* ---------- Referenzen & Bewertungen ---------- */
+    .refs { padding: 80px 0 0; }
+    .sec-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; text-align: center; }
+    .sec-sub { text-align: center; color: var(--muted); margin-top: 8px; font-weight: 600; }
+    .ba-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+    .ba-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; box-shadow: var(--shadow); }
+    .ba { --pos: 50%; position: relative; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; user-select: none; }
+    .ba__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .ba__img--after { clip-path: inset(0 0 0 var(--pos)); }
+    .ba__line { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: var(--white); box-shadow: 0 0 10px rgba(15,58,92,.4); pointer-events: none; }
+    .ba__line::after { content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 38px; height: 38px; border-radius: 50%; background: var(--white); color: var(--blue); font-weight: 900; display: grid; place-items: center; box-shadow: var(--shadow); letter-spacing: 2px; }
+    .ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+    .ba input:focus-visible ~ .ba__line::after { outline: 3px solid var(--blue); outline-offset: 2px; }
+    .ba__tag { position: absolute; top: 10px; padding: 3px 10px; border-radius: 999px; font-size: .78rem; font-weight: 800; background: rgba(15,58,92,.75); color: var(--white); pointer-events: none; }
+    .ba__tag--l { left: 10px; }
+    .ba__tag--r { right: 10px; background: rgba(255,255,255,.9); color: var(--blue-dark); }
+    .ba-card figcaption { display: flex; justify-content: space-between; gap: 8px; padding: 12px 6px 4px; font-weight: 800; }
+    .ba-card figcaption small { color: var(--muted); font-weight: 600; }
+    /* Beispielmotive aus CSS – durch echte Fotos (img.ba__img) ersetzen */
+    .m-terrasse--before { background: radial-gradient(circle at 22% 30%, rgba(52,82,34,.7), transparent 22%), radial-gradient(circle at 72% 62%, rgba(46,66,30,.65), transparent 26%), radial-gradient(circle at 42% 88%, rgba(38,48,28,.6), transparent 18%), linear-gradient(#2f3d22 3px, transparent 3px) 0 0 / 56px 56px, linear-gradient(90deg, #2f3d22 3px, transparent 3px) 0 0 / 56px 56px, #7b776a; }
+    .m-terrasse--after { background: linear-gradient(#b9b1a0 3px, transparent 3px) 0 0 / 56px 56px, linear-gradient(90deg, #b9b1a0 3px, transparent 3px) 0 0 / 56px 56px, #e3ddd0; }
+    .m-einfahrt--before { background: radial-gradient(ellipse at 30% 55%, rgba(20,20,20,.55), transparent 20%), radial-gradient(ellipse at 68% 40%, rgba(30,40,20,.5), transparent 24%), linear-gradient(#3a3a2c 2px, transparent 2px) 0 0 / 100% 26px, repeating-linear-gradient(90deg, #3a3a2c 0 2px, transparent 2px 52px), #6c665a; }
+    .m-einfahrt--after { background: linear-gradient(#a98f78 2px, transparent 2px) 0 0 / 100% 26px, repeating-linear-gradient(90deg, #a98f78 0 2px, transparent 2px 52px), #c9ad94; }
+    .m-fassade--before { background: repeating-linear-gradient(90deg, rgba(60,80,40,.0) 0 18px, rgba(60,80,40,.35) 18px 26px, rgba(60,80,40,0) 26px 60px), linear-gradient(rgba(70,85,50,.55), rgba(70,85,50,.1) 70%), linear-gradient(#b5ae9c 2px, transparent 2px) 0 0 / 100% 36px, #cfc8b6; }
+    .m-fassade--after { background: linear-gradient(#e2ddd2 2px, transparent 2px) 0 0 / 100% 36px, #fbf9f4; }
+
+    .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+    .review { position: relative; background: var(--baby-mist); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+    .review__stars { color: #f5a623; font-size: 1.1rem; letter-spacing: 2px; }
+    .review p { margin: 10px 0 14px; font-weight: 600; }
+    .review footer { color: var(--muted); font-size: .9rem; font-weight: 700; }
+    .review__demo { position: absolute; top: 14px; right: 14px; font-size: .72rem; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--white); border: 1px dashed var(--baby); color: var(--muted); }
+    .reviews-title { margin-top: 64px; }
+
     /* ---------- Footer ---------- */
     .footer { background: var(--blue-dark); color: #cfe6f5; padding: 26px 0; font-size: .9rem; }
     .footer .container { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
@@ -187,7 +229,7 @@
       .hero { padding-bottom: 130px; }
       .hero__grid { grid-template-columns: 1fr; margin-top: 36px; gap: 20px; }
       .price-drop { width: 240px; order: -1; }
-      .facts { grid-template-columns: 1fr; }
+      .facts, .ba-grid, .reviews { grid-template-columns: 1fr; }
       .row { grid-template-columns: 1fr; gap: 0; }
       .areas { grid-template-columns: repeat(2, 1fr); }
     }
@@ -238,15 +280,15 @@
           <p class="hero__lead">Terrasse, Einfahrt, Hof oder Fassade: Wir entfernen Moos, Algen und Dreck gründlich und schonend.</p>
           <div class="chips">
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 € pro m²</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 45 m²</span>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>150 km Umkreis</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 20 m²</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>150 km um Erbach</span>
           </div>
           <a class="btn" href="#anfrage">Jetzt Preis berechnen
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
           </a>
         </div>
 
-        <div class="price-drop" aria-label="Preis: 3 Euro pro Quadratmeter, ab 45 Quadratmeter">
+        <div class="price-drop" aria-label="Preis: 3 Euro pro Quadratmeter, ab 20 Quadratmeter">
           <svg viewBox="0 0 200 250" aria-hidden="true">
             <defs>
               <linearGradient id="dropfill" x1="0" y1="0" x2="0" y2="1">
@@ -260,7 +302,7 @@
           <div class="price-drop__txt">
             <div class="price-drop__big">3<small>€</small></div>
             <div class="price-drop__unit">pro m²</div>
-            <div class="price-drop__min">ab 45 m² · 135 €</div>
+            <div class="price-drop__min">ab 20 m² · 60 €</div>
           </div>
         </div>
       </div>
@@ -280,11 +322,56 @@
       </div>
       <div class="fact">
         <div class="fact__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <div><strong>Ab 45 m²</strong><p>Mindestfläche pro Auftrag – also ab 135 €.</p></div>
+        <div><strong>Ab 20 m²</strong><p>Bis 100 km ab 20 m², bis 150 km ab 45 m² Fläche.</p></div>
       </div>
       <div class="fact">
         <div class="fact__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><strong>150 km Umkreis</strong><p>Wir kommen direkt zu dir vor Ort.</p></div>
+        <div><strong>150 km Umkreis</strong><p>Von Erbach (Odenwald) direkt zu dir vor Ort.</p></div>
+      </div>
+    </section>
+
+    <section class="refs" id="referenzen">
+      <div class="container">
+        <h2 class="sec-title">Vorher – Nachher</h2>
+        <p class="sec-sub">Schieb den Regler und sieh selbst, was Hochdruck ausmacht.</p>
+        <!-- Echte Fotos: die beiden div.ba__img durch <img class="ba__img" src="…"> bzw. <img class="ba__img ba__img--after" src="…"> ersetzen -->
+        <div class="ba-grid">
+        <figure class="ba-card">
+          <div class="ba" role="group" aria-label="Vorher-Nachher-Vergleich Terrasse">
+            <div class="ba__img m-terrasse--before" role="img" aria-label="Terrasse vorher"></div>
+            <div class="ba__img ba__img--after m-terrasse--after" role="img" aria-label="Terrasse nachher"></div>
+            <span class="ba__tag ba__tag--l">Vorher</span><span class="ba__tag ba__tag--r">Nachher</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: Terrasse" />
+            <span class="ba__line"></span>
+          </div>
+          <figcaption>Terrasse <small>Moos &amp; Algen</small></figcaption>
+        </figure>
+        <figure class="ba-card">
+          <div class="ba" role="group" aria-label="Vorher-Nachher-Vergleich Einfahrt">
+            <div class="ba__img m-einfahrt--before" role="img" aria-label="Einfahrt vorher"></div>
+            <div class="ba__img ba__img--after m-einfahrt--after" role="img" aria-label="Einfahrt nachher"></div>
+            <span class="ba__tag ba__tag--l">Vorher</span><span class="ba__tag ba__tag--r">Nachher</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: Einfahrt" />
+            <span class="ba__line"></span>
+          </div>
+          <figcaption>Einfahrt <small>Öl &amp; Schmutz</small></figcaption>
+        </figure>
+        <figure class="ba-card">
+          <div class="ba" role="group" aria-label="Vorher-Nachher-Vergleich Fassade">
+            <div class="ba__img m-fassade--before" role="img" aria-label="Fassade vorher"></div>
+            <div class="ba__img ba__img--after m-fassade--after" role="img" aria-label="Fassade nachher"></div>
+            <span class="ba__tag ba__tag--l">Vorher</span><span class="ba__tag ba__tag--r">Nachher</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: Fassade" />
+            <span class="ba__line"></span>
+          </div>
+          <figcaption>Fassade <small>Grünbelag</small></figcaption>
+        </figure>
+        </div>
+
+        <h2 class="sec-title reviews-title">Das sagen unsere Kunden</h2>
+        <p class="sec-sub">Ehrliche Bewertungen aus der Region.</p>
+        <!-- Bewertungen: im Skript unten im Array REVIEWS pflegen -->
+        <div class="reviews" id="reviews"></div>
       </div>
     </section>
 
@@ -293,7 +380,7 @@
       <svg class="contact__splash contact__splash--r" style="color:var(--baby-soft)" aria-hidden="true"><use href="#splash"/></svg>
       <div class="container">
         <h2>Anfrage in 1 Minute</h2>
-        <p class="contact__sub">Fläche wählen, m² eintragen, Fotos dazu – wir melden uns mit einem Termin.</p>
+        <p class="contact__sub">Fläche wählen, Adresse und m² eintragen, Fotos dazu – wir melden uns mit einem Termin.</p>
 
         <!--
           Formular-Versand: Trage unten in FORM_ENDPOINT deine E-Mail-Adresse ein
@@ -319,11 +406,34 @@
               </div>
             </fieldset>
 
+            <div class="field" data-field="strasse">
+              <label for="strasse">Straße &amp; Hausnummer des Einsatzortes</label>
+              <input type="text" id="strasse" name="Straße" autocomplete="street-address" placeholder="z. B. Hauptstraße 12" required />
+              <span class="err"></span>
+            </div>
+            <div class="row row--plz">
+              <div class="field" data-field="plz">
+                <label for="plz">PLZ</label>
+                <input type="text" id="plz" name="PLZ" autocomplete="postal-code" inputmode="numeric" maxlength="5" placeholder="64711" required />
+                <span class="err"></span>
+              </div>
+              <div class="field" data-field="ort">
+                <label for="ort">Ort</label>
+                <input type="text" id="ort" name="Ort" autocomplete="address-level2" placeholder="z. B. Erbach" required />
+                <span class="err"></span>
+              </div>
+            </div>
+            <div class="distance" id="distance" aria-live="polite">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="distanceTxt">PLZ eingeben – wir zeigen dir die Mindestfläche für deinen Ort.</span>
+            </div>
+            <input type="hidden" name="Entfernung ab Erbach" id="distanceField" value="unbekannt" />
+
             <div class="field" data-field="qm">
               <label for="qm">Wie viele Quadratmeter?</label>
               <div class="sqm">
-                <input type="range" id="qmRange" min="45" max="500" step="1" value="60" aria-label="Quadratmeter einstellen" />
-                <div class="sqm__num"><input type="number" id="qm" name="Quadratmeter" min="45" step="1" value="60" inputmode="numeric" required /><em>m²</em></div>
+                <input type="range" id="qmRange" min="5" max="500" step="1" value="60" aria-label="Quadratmeter einstellen" />
+                <div class="sqm__num"><input type="number" id="qm" name="Quadratmeter" min="5" step="1" value="60" inputmode="numeric" required /><em>m²</em></div>
               </div>
               <span class="err" id="qmErr"></span>
             </div>
@@ -334,17 +444,10 @@
             </div>
             <input type="hidden" name="Preis (Schätzung)" id="priceField" value="180 €" />
 
-            <div class="row">
-              <div class="field" data-field="name">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="Name" autocomplete="name" required />
-                <span class="err"></span>
-              </div>
-              <div class="field" data-field="ort">
-                <label for="ort">PLZ &amp; Ort des Einsatzes</label>
-                <input type="text" id="ort" name="Einsatzort" autocomplete="postal-code" placeholder="z. B. 12345 Musterstadt" required />
-                <span class="err"></span>
-              </div>
+            <div class="field" data-field="name">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" autocomplete="name" required />
+              <span class="err"></span>
             </div>
             <div class="row">
               <div class="field" data-field="email">
@@ -384,7 +487,7 @@
             <button class="btn" type="submit">Kostenlos anfragen
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
             </button>
-            <p class="form__note">Unverbindlich · Einsatz im Umkreis von 150 km · Mindestfläche 45 m²</p>
+            <p class="form__note">Unverbindlich · bis 100 km um Erbach ab 20 m² · bis 150 km ab 45 m²</p>
           </div>
 
           <div class="success" role="status">
@@ -420,7 +523,11 @@
 
   <script>
     (function () {
-      var PRICE = 3, MIN = 45, MAX_FILES = 5, MAX_MB = 5;
+      var PRICE = 3, MAX_FILES = 5, MAX_MB = 5;
+      var CALC_MIN = 5;                          // Preisrechner ab 5 m²
+      var NEAR_KM = 100, MIN_NEAR = 20;          // bis 100 km ab Erbach: ab 20 m²
+      var MAX_KM = 150, MIN_FAR = 45;            // 100–150 km: ab 45 m²
+      var HOME = { lat: 49.6489, lon: 8.997 };   // Erbach (Odenwald), PLZ 64711
 
       document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -439,10 +546,77 @@
         }
       }
 
+      // Bewertungen – hier echte Kundenstimmen eintragen und "beispiel: true" entfernen
+      var REVIEWS = [
+        { sterne: 5, text: "Platzhalter: Hier steht bald eine echte Bewertung zu einer Terrassenreinigung.", name: "Kundenname", ort: "Ort", beispiel: true },
+        { sterne: 5, text: "Platzhalter: Hier steht bald eine echte Bewertung zu einer Einfahrt oder einem Hof.", name: "Kundenname", ort: "Ort", beispiel: true },
+        { sterne: 5, text: "Platzhalter: Hier steht bald eine echte Bewertung zu einer Fassadenreinigung.", name: "Kundenname", ort: "Ort", beispiel: true }
+      ];
+      var reviewsEl = document.getElementById("reviews");
+      REVIEWS.forEach(function (r) {
+        var el = document.createElement("article");
+        el.className = "review";
+        var stars = document.createElement("div");
+        stars.className = "review__stars";
+        stars.textContent = "★★★★★".slice(0, r.sterne) + "☆☆☆☆☆".slice(0, 5 - r.sterne);
+        stars.setAttribute("aria-label", r.sterne + " von 5 Sternen");
+        var p = document.createElement("p");
+        p.textContent = "„" + r.text + "“";
+        var f = document.createElement("footer");
+        f.textContent = r.name + " · " + r.ort;
+        el.appendChild(stars); el.appendChild(p); el.appendChild(f);
+        if (r.beispiel) { var b = document.createElement("span"); b.className = "review__demo"; b.textContent = "Beispiel"; el.appendChild(b); }
+        reviewsEl.appendChild(el);
+      });
+
+      // Vorher-Nachher-Regler
+      document.querySelectorAll(".ba input").forEach(function (inp) {
+        inp.addEventListener("input", function () { inp.parentNode.style.setProperty("--pos", inp.value + "%"); });
+      });
+
       // Dialog (Impressum/Datenschutz)
       var dlg = document.getElementById("dlg");
       document.querySelectorAll("[data-open]").forEach(function (el) {
         el.addEventListener("click", function () { dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", ""); });
+      });
+
+      // Entfernung ab Erbach (Luftlinie über die PLZ) → Mindestfläche
+      var distance = null; // km, null = unbekannt
+      var distBox = document.getElementById("distance"), distTxt = document.getElementById("distanceTxt"), distField = document.getElementById("distanceField");
+      var plz = document.getElementById("plz"), ort = document.getElementById("ort");
+      function minFor(km) { return km !== null && km > NEAR_KM ? MIN_FAR : MIN_NEAR; }
+      function km(lat, lon) {
+        var r = Math.PI / 180, dLat = (lat - HOME.lat) * r, dLon = (lon - HOME.lon) * r;
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(HOME.lat * r) * Math.cos(lat * r) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return Math.round(6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+      }
+      function showDistance(state, text) {
+        distBox.className = "distance" + (state ? " distance--" + state : "");
+        distTxt.textContent = text;
+      }
+      var lookupId = 0;
+      plz.addEventListener("input", function () {
+        var v = plz.value.replace(/\D/g, "").slice(0, 5);
+        if (plz.value !== v) plz.value = v;
+        distance = null; distField.value = "unbekannt";
+        if (v.length < 5) { showDistance("", "PLZ eingeben – wir zeigen dir die Mindestfläche für deinen Ort."); update(qm); return; }
+        var id = ++lookupId;
+        showDistance("", "Entfernung wird berechnet …");
+        fetch("https://api.zippopotam.us/de/" + v).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+          if (id !== lookupId) return;
+          var p = d.places[0];
+          distance = km(+p.latitude, +p.longitude);
+          distField.value = "ca. " + distance + " km (Luftlinie)";
+          if (!ort.value.trim()) ort.value = p["place name"];
+          if (distance > MAX_KM) showDistance("out", "ca. " + distance + " km von Erbach – leider außerhalb unseres Einsatzgebiets (max. " + MAX_KM + " km).");
+          else showDistance("ok", (distance < 3 ? "In Erbach" : "ca. " + distance + " km von Erbach") + " – Mindestfläche " + minFor(distance) + " m².");
+          setErr("plz", "");
+          update(qm);
+        }).catch(function () {
+          if (id !== lookupId) return;
+          showDistance("", "Entfernung konnte nicht ermittelt werden – wir prüfen das nach deiner Anfrage.");
+          update(qm);
+        });
       });
 
       // Quadratmeter + Preis
@@ -452,13 +626,14 @@
       function update(from) {
         var v = parseInt(from.value, 10);
         if (from === range) qm.value = v;
-        else if (!isNaN(v)) range.value = Math.min(Math.max(v, MIN), +range.max);
+        else if (!isNaN(v)) range.value = Math.min(Math.max(v, CALC_MIN), +range.max);
         var n = parseInt(qm.value, 10);
-        var ok = !isNaN(n) && n >= MIN;
+        var ok = !isNaN(n) && n >= CALC_MIN;
         estQm.textContent = isNaN(n) ? "–" : n;
-        estPrice.textContent = ok ? fmt.format(n * PRICE) : "ab " + fmt.format(MIN * PRICE);
+        estPrice.textContent = ok ? fmt.format(n * PRICE) : "–";
         priceField.value = estPrice.textContent;
-        if (ok) setErr("qm", "");
+        var min = minFor(distance);
+        setErr("qm", ok && n < min ? "Für deinen Ort ist die Mindestfläche " + min + " m² (" + fmt.format(min * PRICE) + ")." : "");
       }
       range.addEventListener("input", function () { update(range); });
       qm.addEventListener("input", function () { update(qm); });
@@ -515,10 +690,13 @@
       form.addEventListener("submit", function (ev) {
         var first = null;
         function check(key, el, bad, msg) { setErr(key, bad ? msg : ""); if (bad && !first) first = el; }
-        var n = parseInt(qm.value, 10);
-        check("qm", qm, isNaN(n) || n < MIN, "Mindestfläche sind " + MIN + " m².");
+        var n = parseInt(qm.value, 10), min = minFor(distance);
+        check("strasse", form["Straße"], !form["Straße"].value.trim(), "Bitte gib Straße und Hausnummer an.");
+        check("plz", plz, !/^\d{5}$/.test(plz.value), "Bitte gib eine 5-stellige PLZ an.");
+        if (distance !== null && distance > MAX_KM) check("plz", plz, true, "Dieser Ort liegt außerhalb unseres Einsatzgebiets (max. " + MAX_KM + " km).");
+        check("ort", ort, !ort.value.trim(), "Bitte gib den Ort an.");
+        check("qm", qm, isNaN(n) || n < min, "Für deinen Ort ist die Mindestfläche " + min + " m².");
         check("name", form.Name, !form.Name.value.trim(), "Bitte gib deinen Namen an.");
-        check("ort", form.Einsatzort, !form.Einsatzort.value.trim(), "Bitte gib PLZ und Ort an.");
         check("email", form.email, !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim()), "Bitte gib eine gültige E-Mail an.");
         var dsgvo = document.getElementById("dsgvo");
         check("dsgvo", dsgvo, !dsgvo.checked, "Bitte stimme der Verarbeitung zu.");
@@ -533,7 +711,8 @@
             "Quadratmeter: " + n + " m²",
             "Preis (Schätzung): " + priceField.value,
             "Name: " + form.Name.value,
-            "Einsatzort: " + form.Einsatzort.value,
+            "Einsatzort: " + form["Straße"].value + ", " + plz.value + " " + ort.value,
+            "Entfernung ab Erbach: " + distField.value,
             "E-Mail: " + form.email.value,
             "Telefon: " + form.Telefon.value,
             "Sonderwünsche: " + form["Sonderwünsche"].value,

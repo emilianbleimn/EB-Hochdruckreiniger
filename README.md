@@ -12,4 +12,6 @@ Live über GitHub Pages: https://emilianbleimn.github.io/EB-Hochdruckreiniger/
    (beim ersten Absenden kommt eine Bestätigungsmail). Solange der Platzhalter drinsteht, öffnet das
    Formular das E-Mail-Programm (`mailto:info@example.de`).
 2. **Impressum:** Platzhalter im Dialog `#dlg` durch die echten Pflichtangaben ersetzen.
-3. **Preis und Mindestfläche:** `PRICE` und `MIN` im Skript am Ende der Datei sowie die Texte im Hero.
+3. **Preis, Mindestflächen, Entfernung:** Konstanten `PRICE`, `CALC_MIN`, `NEAR_KM`/`MIN_NEAR`, `MAX_KM`/`MIN_FAR` und `HOME` (Erbach, Odenwald) im Skript am Ende der Datei sowie die Texte im Hero. Die Entfernung wird per PLZ über api.zippopotam.us als Luftlinie berechnet.
+4. **Bewertungen:** Array `REVIEWS` im Skript – echte Stimmen eintragen, `beispiel: true` entfernen.
+5. **Vorher/Nachher:** die `div.ba__img` durch `<img class="ba__img" …>` mit echten Fotos ersetzen.
