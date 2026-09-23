@@ -1,4 +1,4 @@
-# EB Hochdruckreinigung — Landing Page
+# EB Flächenreinigung mit Hochdruck & Schneedienst — Landing Page
 
 Einseitige Landing Page in Babyblau/Weiß mit Splash-Design: 3 € pro m², ab 45 m², 150 km Umkreis.
 Alles steckt in `index.html` (HTML, CSS und JS), extern geladen wird nur die Schrift *Nunito* von Google Fonts.

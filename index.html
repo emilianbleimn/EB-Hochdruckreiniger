@@ -293,7 +293,7 @@
     <div class="container">
       <div class="topbar">
         <a class="brand" href="#">
-          <img src="assets/logo-weiss.svg" alt="EB Hochdruckreinigung &amp; Schneedienst · Erbach" width="583" height="124" />
+          <img src="assets/logo-weiss.svg" alt="EB Flächenreinigung mit Hochdruck &amp; Schneedienst · Erbach" width="550" height="124" />
         </a>
         <a class="topbar__cta" href="#anfrage">Anfrage senden</a>
       </div>
@@ -438,7 +438,7 @@
         -->
         <form class="form" id="form" action="https://formsubmit.co/DEINE-EMAIL@example.de" method="POST" enctype="multipart/form-data" novalidate>
           <div class="form__body">
-            <input type="hidden" name="_subject" value="Neue Anfrage Hochdruckreinigung" />
+            <input type="hidden" name="_subject" value="Neue Anfrage: Flächenreinigung mit Hochdruck / Schneedienst" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
@@ -560,7 +560,7 @@
 
   <footer class="footer">
     <div class="container">
-      <span>© <span id="year">2026</span> EB Hochdruckreinigung</span>
+      <span>© <span id="year">2026</span> EB Flächenreinigung mit Hochdruck &amp; Schneedienst</span>
       <span><button type="button" class="linklike" data-open="dlg">Impressum &amp; Datenschutz</button></span>
     </div>
   </footer>
@@ -568,7 +568,7 @@
   <dialog id="dlg" aria-labelledby="dlgTitle">
     <h3 id="dlgTitle">Impressum</h3>
     <p>
-      EB Hochdruckreinigung<br />
+      EB Flächenreinigung mit Hochdruck &amp; Schneedienst<br />
       Vorname Nachname<br />
       Straße Nr. · PLZ Ort<br />
       Telefon: 0000 000000 · E-Mail: info@example.de
@@ -790,7 +790,7 @@
             "Sonderwünsche: " + form["Sonderwünsche"].value,
             files.length ? "\n(Bitte " + files.length + " Foto(s) an diese E-Mail anhängen.)" : ""
           ].join("\n");
-          window.location.href = "mailto:info@example.de?subject=" + encodeURIComponent("Anfrage Hochdruckreinigung") + "&body=" + encodeURIComponent(body);
+          window.location.href = "mailto:info@example.de?subject=" + encodeURIComponent("Anfrage " + form.querySelector('input[name="Leistung"]:checked').value) + "&body=" + encodeURIComponent(body);
           form.classList.add("is-sent");
         }
       });
