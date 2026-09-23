@@ -27,3 +27,14 @@ Alle Dateien liegen in `assets/`. Die Schrift ist in Pfade umgewandelt, das Logo
 | `logo-icon.svg`, `logo-icon-512.png`, `logo-icon-1024.png` | Nur die Bildmarke (Profilbild für Google, WhatsApp, Instagram) |
 | `favicon.svg` | Vereinfachtes Symbol für den Browser-Tab |
 | `logo.pdf` | Alle drei Varianten als Vektor-PDF für Druckerei und Folierung |
+
+## Flyer A6
+
+`flyer/flyer-a6-druck.pdf` ist die Druckvorlage für DIN A6 hochkant, 4/4-farbig (Vorder- und Rückseite):
+
+- Endformat 105 × 148 mm, Datenformat 109 × 152 mm (2 mm Beschnitt rundherum)
+- Texte mindestens 4 mm vom Rand des Endformats entfernt
+- RGB-PDF, Schriften als Vektoren eingebettet, Schatten mit 300 dpi. Die Druckerei wandelt beim Druck in CMYK um
+- Der QR-Code führt zu https://emilianbleimn.github.io/EB-Hochdruckreiniger/#anfrage
+
+Quelle ist `flyer/flyer.html`. Nach Änderungen im Browser mit „Drucken → Als PDF speichern“ (Ränder: keine, Hintergrundgrafiken: an) neu erzeugen.
