@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EB Hochdruckreinigung · 3 € pro m²</title>
+  <title>EB Hochdruckreinigung &amp; Schneedienst · 3 € pro m²</title>
   <meta name="description" content="Professionelle Hochdruckreinigung für Terrasse, Einfahrt, Hof, Wege und Treppen: 3 € pro m², ab 5 m², im Umkreis von bis zu 150 km um Erbach (Odenwald). Jetzt Anfrage mit Fotos senden." />
   <meta name="theme-color" content="#89cff0" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C12 2 5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2 12 2z' fill='%2389cff0'/%3E%3C/svg%3E" />
@@ -71,6 +71,8 @@
 
     .hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; margin-top: 56px; }
     .hero h1 { font-size: clamp(2.2rem, 5.4vw, 3.9rem); line-height: 1.05; font-weight: 900; text-shadow: 0 6px 30px rgba(15,58,92,.25); }
+    .hero__grid > * { min-width: 0; }
+    .hero h1 { overflow-wrap: break-word; hyphens: auto; }
     .hero h1 span { display: block; color: var(--blue-dark); text-shadow: none; }
     .hero__lead { margin-top: 18px; font-size: 1.15rem; max-width: 34ch; color: #f4fbff; font-weight: 600; }
     .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
@@ -245,6 +247,7 @@
     @media (max-width: 820px) {
       .hero { padding-bottom: 130px; }
       .hero__grid { grid-template-columns: 1fr; margin-top: 36px; gap: 20px; }
+      .hero h1 { font-size: clamp(1.6rem, 7.6vw, 3rem); }
       .price-drop { width: 240px; order: -1; }
       .facts, .ba-grid, .reviews, .winter__box { grid-template-columns: 1fr; }
       .row { grid-template-columns: 1fr; gap: 0; }
@@ -293,8 +296,8 @@
 
       <div class="hero__grid">
         <div>
-          <h1>Sauber mit Druck. <span>Wie neu in einem Tag.</span></h1>
-          <p class="hero__lead">Terrasse, Einfahrt, Hof, Wege oder Treppen: Wir entfernen Moos, Algen und Dreck gründlich und schonend. Im Winter räumen wir Schnee.</p>
+          <h1>Hochdruckreinigung &amp; Schneedienst <span>aus Erbach im Odenwald.</span></h1>
+          <p class="hero__lead">Für Terrasse, Einfahrt, Hof, Wege und Treppen – im Sommer mit Hochdruck, im Winter mit dem Schneeschieber.</p>
           <div class="chips">
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>3 € pro m²</span>
             <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ab 5 m² im Umkreis von 100 km</span>
